@@ -1,0 +1,149 @@
+﻿body {
+    position: relative; /* For scrollyspy */
+    padding-top: 4px; /* Account for fixed navbar */
+    padding-bottom: 30px;
+}
+
+/*navbar*/
+.navbar-inverse {
+    background-color: #2d7e3e;
+    border-color: #080808;
+}
+
+    .navbar-inverse .navbar-nav > li > a {
+        color: #ffffff;
+    }
+
+.navbar-nav > li > a {
+    margin-right: 10px;
+}
+
+.navbar-header {
+    padding-left: 10px;
+}
+/*fin navbar*/
+
+/**/
+
+/**/
+
+/*
+ * Footer
+ *
+ * Separated section of content at the bottom of all pages
+ */
+/*Footer*/
+.copyright-text {
+    color: #888888;
+    font-size: 10px;
+    line-height: 10px;
+    text-align: center;
+}
+
+.copyright {
+    color: #888888;
+    text-align: center;
+}
+
+.copyright-text p {
+    margin: 0;
+}
+
+.estiloTexto {
+    font-size: 11px;
+}
+/***fin de footer***/
+
+
+/*]***/
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:focus, .navbar-inverse .navbar-nav > .open > a:hover {
+    color: #fff;
+    background-color: #2d7e3e;
+}
+
+.navbar-login {
+    width: 305px;
+    padding: 10px;
+    padding-bottom: 0px;
+}
+
+.navbar-login-session {
+    padding: 10px;
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+.icon-size {
+    font-size: 87px;
+}
+
+.imagen {
+    font-size: 87px;
+}
+
+.open > .dropdown-menu {
+    right: 20px;
+}
+
+/*configuración de iconos*/
+
+.glyphicon-th-list:before {
+    color: white;
+    margin-left: 20px;
+}
+
+.navbar-inverse .nav li.dropdown.open > .dropdown-toggle, .navbar-inverse .nav li.dropdown.active > .dropdown-toggle, .navbar-inverse .nav li.dropdown.open.active > .dropdown-toggle {
+    background-color: #2d7e3e;
+}
+
+.column-text {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.metro .tile.wide.imagetext .image-wrapper img {
+    margin-top: 20px;
+    margin-left: 20px;
+}
+/*popup*/
+.modal-header {
+    padding-bottom: 5px;
+}
+
+.modal-footer {
+    padding: 0;
+}
+
+    .modal-footer .btn-group button {
+        height: 40px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border: none;
+        border-right: 1px solid #ddd;
+    }
+
+    .modal-footer .btn-group:last-child > button {
+        border-right: 0;
+    }
+    .Hydro_Form fieldset legend {
+  /*padding: 10px 10px 10px 10px;*/ 
+  /*border:1px solid green; */
+  color:green; 
+  /*float:right;*/ 
+  -moz-border-radius: 4px; 
+  -webkit-border-radius: 8px; 
+  border-radius: 8px;
+}
+    h1, h2, h3, h4, h5, h6
+{
+    /*font-size: 1.4em;*/
+    /*color: #87ae50;*/
+    /*font-variant: small-caps;*/
+    color:green; 
+    text-transform: none;
+    /*font-weight: 200;*/
+    /*margin-bottom: 0px;*/
+    text-shadow: 2px 2px 3px rgba(150, 150, 150, 0.75); 
+
+}

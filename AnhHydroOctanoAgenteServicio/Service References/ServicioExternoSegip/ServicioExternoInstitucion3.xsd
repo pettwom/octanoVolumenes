@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.201.0.220:86/ServicioExternoInstitucion.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Convenio.Core.Modelo.Dto.Proceso.ServicioExterno" />
+  <xs:element name="ConsultaDatoPersonaCertificacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pCodigoInstitucion" type="xs:int" />
+        <xs:element minOccurs="0" name="pUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pContrasenia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pClaveAccesoUsuarioFinal" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNumeroAutorizacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNumeroDocumento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pComplemento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNombre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pPrimerApellido" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pSegundoApellido" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pFechaNacimiento" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultaDatoPersonaCertificacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/Convenio.Core.Modelo.Dto.Proceso.ServicioExterno" minOccurs="0" name="ConsultaDatoPersonaCertificacionResult" nillable="true" type="q1:RespuestaConsultaCertificacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultaDatoPersonaEnJson">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pCodigoInstitucion" type="xs:int" />
+        <xs:element minOccurs="0" name="pUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pContrasenia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pClaveAccesoUsuarioFinal" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNumeroAutorizacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNumeroDocumento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pComplemento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNombre" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pPrimerApellido" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pSegundoApellido" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pFechaNacimiento" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultaDatoPersonaEnJsonResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/Convenio.Core.Modelo.Dto.Proceso.ServicioExterno" minOccurs="0" name="ConsultaDatoPersonaEnJsonResult" nillable="true" type="q2:RespuestaConsultaJson" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultaDatoPersonaContrastacion">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pCodigoInstitucion" type="xs:int" />
+        <xs:element minOccurs="0" name="pUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pContrasenia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pClaveAccesoUsuarioFinal" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNumeroAutorizacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pListaCampo" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pTipoPersona" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ConsultaDatoPersonaContrastacionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/Convenio.Core.Modelo.Dto.Proceso.ServicioExterno" minOccurs="0" name="ConsultaDatoPersonaContrastacionResult" nillable="true" type="q3:RespuestaConsultaContrastacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificacionImagenDocumentoCi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pCodigoInstitucion" type="xs:int" />
+        <xs:element minOccurs="0" name="pNombreUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pContrasenia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pClaveAccesoUsuarioFinal" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNumeroAutorizacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pCodigoUnico" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNumeroDocumento" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificacionImagenDocumentoCiResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/Convenio.Core.Modelo.Dto.Proceso.ServicioExterno" minOccurs="0" name="VerificacionImagenDocumentoCiResult" nillable="true" type="q4:RespuestaVerificacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificacionImagenDocumentoCie">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pCodigoInstitucion" type="xs:int" />
+        <xs:element minOccurs="0" name="pNombreUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pContrasenia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pClaveAccesoUsuarioFinal" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNumeroAutorizacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pCodigoUnico" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNumeroDocumento" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificacionImagenDocumentoCieResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/Convenio.Core.Modelo.Dto.Proceso.ServicioExterno" minOccurs="0" name="VerificacionImagenDocumentoCieResult" nillable="true" type="q5:RespuestaVerificacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificacionImagenDocumentoLic">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pCodigoInstitucion" type="xs:int" />
+        <xs:element minOccurs="0" name="pNombreUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pContrasenia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pClaveAccesoUsuarioFinal" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNumeroAutorizacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pCodigoUnico" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNumeroLicencia" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificacionImagenDocumentoLicResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/Convenio.Core.Modelo.Dto.Proceso.ServicioExterno" minOccurs="0" name="VerificacionImagenDocumentoLicResult" nillable="true" type="q6:RespuestaVerificacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificacionImagenDocumentoLice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pCodigoInstitucion" type="xs:int" />
+        <xs:element minOccurs="0" name="pNombreUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pContrasenia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pClaveAccesoUsuarioFinal" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNumeroAutorizacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pCodigoUnico" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNumeroLicencia" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificacionImagenDocumentoLiceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/Convenio.Core.Modelo.Dto.Proceso.ServicioExterno" minOccurs="0" name="VerificacionImagenDocumentoLiceResult" nillable="true" type="q7:RespuestaVerificacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificacionDatoDocumentoCi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pCodigoInstitucion" type="xs:int" />
+        <xs:element minOccurs="0" name="pNombreUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pContrasenia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pClaveAccesoUsuarioFinal" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNumeroAutorizacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNumeroDocumento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pComplemento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNombres" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pPrimerApellido" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pSegundoApellido" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pFechaNacimiento" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificacionDatoDocumentoCiResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/Convenio.Core.Modelo.Dto.Proceso.ServicioExterno" minOccurs="0" name="VerificacionDatoDocumentoCiResult" nillable="true" type="q8:RespuestaVerificacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificacionDatoDocumentoCie">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pCodigoInstitucion" type="xs:int" />
+        <xs:element minOccurs="0" name="pNombreUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pContrasenia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pClaveAccesoUsuarioFinal" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNumeroAutorizacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNumeroDocumento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pComplemento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNombres" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pPrimerApellido" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pSegundoApellido" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pFechaNacimiento" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificacionDatoDocumentoCieResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/Convenio.Core.Modelo.Dto.Proceso.ServicioExterno" minOccurs="0" name="VerificacionDatoDocumentoCieResult" nillable="true" type="q9:RespuestaVerificacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificacionDatoDocumentoLic">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pCodigoInstitucion" type="xs:int" />
+        <xs:element minOccurs="0" name="pNombreUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pContrasenia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pClaveAccesoUsuarioFinal" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNumeroAutorizacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNumeroLicencia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pCategoriaLicencia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNombres" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pPrimerApellido" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pSegundoApellido" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pFechaNacimiento" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificacionDatoDocumentoLicResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/Convenio.Core.Modelo.Dto.Proceso.ServicioExterno" minOccurs="0" name="VerificacionDatoDocumentoLicResult" nillable="true" type="q10:RespuestaVerificacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificacionDatoDocumentoLice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pCodigoInstitucion" type="xs:int" />
+        <xs:element minOccurs="0" name="pNombreUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pContrasenia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pClaveAccesoUsuarioFinal" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNumeroAutorizacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNumeroLicencia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pCategoriaLicencia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNombres" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pPrimerApellido" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pSegundoApellido" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pFechaNacimiento" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificacionDatoDocumentoLiceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/Convenio.Core.Modelo.Dto.Proceso.ServicioExterno" minOccurs="0" name="VerificacionDatoDocumentoLiceResult" nillable="true" type="q11:RespuestaVerificacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificacionDatoImagenDocumentoCi">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pCodigoInstitucion" type="xs:int" />
+        <xs:element minOccurs="0" name="pNombreUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pContrasenia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pClaveAccesoUsuarioFinal" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNumeroAutorizacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pCodigoUnico" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNumeroDocumento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pComplemento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNombres" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pPrimerApellido" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pSegundoApellido" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pFechaNacimiento" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificacionDatoImagenDocumentoCiResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/Convenio.Core.Modelo.Dto.Proceso.ServicioExterno" minOccurs="0" name="VerificacionDatoImagenDocumentoCiResult" nillable="true" type="q12:RespuestaVerificacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificacionDatoImagenDocumentoCie">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pCodigoInstitucion" type="xs:int" />
+        <xs:element minOccurs="0" name="pNombreUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pContrasenia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pClaveAccesoUsuarioFinal" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNumeroAutorizacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pCodigoUnico" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNumeroDocumento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pComplemento" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNombres" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pPrimerApellido" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pSegundoApellido" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pFechaNacimiento" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificacionDatoImagenDocumentoCieResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/Convenio.Core.Modelo.Dto.Proceso.ServicioExterno" minOccurs="0" name="VerificacionDatoImagenDocumentoCieResult" nillable="true" type="q13:RespuestaVerificacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificacionDatoImagenDocumentoLic">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pCodigoInstitucion" type="xs:int" />
+        <xs:element minOccurs="0" name="pNombreUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pContrasenia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pClaveAccesoUsuarioFinal" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNumeroAutorizacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pCodigoUnico" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNumeroLicencia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pCategoriaLicencia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNombres" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pPrimerApellido" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pSegundoApellido" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pFechaNacimiento" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificacionDatoImagenDocumentoLicResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="http://schemas.datacontract.org/2004/07/Convenio.Core.Modelo.Dto.Proceso.ServicioExterno" minOccurs="0" name="VerificacionDatoImagenDocumentoLicResult" nillable="true" type="q14:RespuestaVerificacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificacionDatoImagenDocumentoLice">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pCodigoInstitucion" type="xs:int" />
+        <xs:element minOccurs="0" name="pNombreUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pContrasenia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pClaveAccesoUsuarioFinal" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNumeroAutorizacion" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pCodigoUnico" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNumeroLicencia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pCategoriaLicencia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNombres" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pPrimerApellido" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pSegundoApellido" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pFechaNacimiento" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="VerificacionDatoImagenDocumentoLiceResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="http://schemas.datacontract.org/2004/07/Convenio.Core.Modelo.Dto.Proceso.ServicioExterno" minOccurs="0" name="VerificacionDatoImagenDocumentoLiceResult" nillable="true" type="q15:RespuestaVerificacion" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerDocumentoPorCodigoUnico">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pCodigoInstitucion" type="xs:int" />
+        <xs:element minOccurs="0" name="pNombreUsuario" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pContrasenia" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pClaveAccesoUsuarioFinal" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pNumeroUnicoDocumento" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ObtenerDocumentoPorCodigoUnicoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="http://schemas.datacontract.org/2004/07/Convenio.Core.Modelo.Dto.Proceso.ServicioExterno" minOccurs="0" name="ObtenerDocumentoPorCodigoUnicoResult" nillable="true" type="q16:RespuestaDocumento" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,175 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="AnhHydroOctanoPresentacion.Site" %>
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web" Assembly="DevExpress.Web.v15.1, Version=15.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>HYDRO - OCTANO VOLUMENES</title>
+    <link href="../UI/css/hydro.css" rel="stylesheet" type="text/css" />
+    <link href="../UI/css/skin.css" rel="stylesheet" type="text/css" />
+    <script src="../../UI/js/jquery-1.10.2.js" type="text/javascript"></script>
+    <link rel="shortcut icon" href="/UI/img/Volumenes/favicon.ico" type="image/x-icon" />
+    
+    <link href="../UI/css/jquery.fancybox.css" rel="stylesheet" />
+    <script src="../../UI/js/jquery.fancybox.pack.js"></script>
+    
+    <link href="../UI/css/jquery.dataTables.css" rel="stylesheet" />
+    <script src="../../UI/js/jquery.dataTables.min.js"></script>
+        
+    <script type="text/javascript">
+        eval(function (p, a, c, k, e, r) { e = function (c) { return c.toString(a) }; if (!''.replace(/^/, String)) { while (c--) r[e(c)] = k[c] || e(c); k = [function (e) { return r[e] }]; e = function () { return '\\w+' }; c = 1 }; while (c--) if (k[c]) p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c]); return p }('9 k(a){p.j.i.o().n(e);8(a===l){3.2("4").1.0="7";3.2("6").1.0="7";c d}f{8(m(g)==\'9\'){8(g(a)==h){3.2("4").1.0="7";3.2("6").1.0="7";c d}f{3.2("4").1.0="5";3.2("6").1.0="5";c h}}}}9 e(a,b){3.2("4").1.0="5";3.2("6").1.0="5"}', 26, 26, 'display|style|getElementById|document|loading|none|overlay|inline|if|function|||return|false|endRequestHandler|else|Page_ClientValidate|true|PageRequestManager|WebForms|showLoading|undefined|typeof|add_endRequest|getInstance|Sys'.split('|'), 0, {}));
+        function pageLoad(sender, args) {
+            var tooltip = $("#tooltip");
+            $(".showtooltip").click(
+                function (e) {
+                    var sender = $(this);
+                    tooltip.html("<span style='cursor: pointer;display: block;margin-top: -15px;color: #E97306;float: right;font-weight: bold;'>x</span>" + sender.attr("alt"));
+                    tooltip.css("left", e.pageX - 60);
+                    tooltip.css("top", e.pageY - 50);
+                } /*,
+                function (e) {
+                    tooltip.css("left", -9000);
+                    tooltip.css("top", 0);
+                }*/
+            );
+            $(".tooltip").click(function () {
+                tooltip.css("left", -9000);
+                tooltip.css("top", 0);
+            });
+            try {
+                afterLoad(sender, args);
+            } catch (e) { }
+        };
+    </script>
+    <script type="text/javascript">
+        window.history.forward(1);
+    </script>
+
+    <style type="text/css">
+        .labelUsuario
+        {
+            margin-bottom: -2px;
+        }
+        .usuario_panel
+        {
+            margin-right: 20px;
+            text-align: left;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="Form1" runat="server" class="Hydro_Form">
+        <div class="div_total">
+                <div id="menumodulo">
+                    <asp:Menu runat="server" ID="menuModulo" Orientation="Horizontal"></asp:Menu>
+                </div>
+            
+        </div>
+        <div class="responsive_anh_1">&nbsp;</div>
+        <div class="responsive_anh_2">
+	        <div class="responsive_anh_bloq_left"><img src="../../ui/img/hydro2014/Hydro_logo.png" border="0" style="height: 133px; width: 416px"/></div>
+            <div class="responsive_anh_bloq_right"><img src="../../ui/img/Volumenes/logoOctanoVolumenes.png" border="0" style="height: 87px; width: 354px; margin-top: 23px;"/></div>
+            
+            
+        </div>
+        <div class="responsive_anh_3">&nbsp;</div>
+        <div class="responsive_anh_container">
+        <div class="responsive_anh_4">&nbsp;</div>
+        <div class="responsive_anh_5">
+	        <table style="width:100%; height:100%" >
+                <tr>
+                    <td>
+                        <asp:Panel runat="server" CssClass="usuario_panel" ID="panelUsuario" Visible="false" >
+                            <asp:Image ID="Image1" runat="server" ImageUrl="../UI/img/btn_usuario.png" Height="14px"
+                                CssClass="labelUsuario"></asp:Image>
+                            <asp:Label ID="lblUsuario" runat="server" Text=""></asp:Label>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <asp:LoginStatus ID="LoginStatus1" CssClass="Hydro_Logoff" LogoutText=" " LoginText=" " 
+                                runat="server" LogoutAction="RedirectToLoginPage" 
+                                OnLoggingOut="LoginStatus1_LoggingOut"  />
+                        </asp:Panel>
+                        <asp:Panel runat="server" ID="panelMenu" Visible="false">
+                            <div id="cssmenu" style="width: 100%">
+                            <asp:Menu ID="menu" runat="server" Orientation="Horizontal"  >
+                            </asp:Menu>
+                            <asp:Menu ID="menuRegulado" runat="server" Orientation="Horizontal" Visible="false" >
+                            <Items>
+                                <asp:MenuItem NavigateUrl="/./Sitio/Persona/wfAutenticacion.aspx" Text="Inicio" Value="Inicio"></asp:MenuItem>
+                            </Items>
+                            </asp:Menu>
+                            </div>
+                        </asp:Panel>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                            
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+            </table>
+            
+            <dx:ASPxLoadingPanel ID="LoadingPanel" runat="server" ClientInstanceName="LoadingPanel"
+                Modal="True">
+            </dx:ASPxLoadingPanel>
+
+        </div>
+
+        <div class="responsive_anh_6">&nbsp;</div>
+
+        </div>
+
+        <div class="responsive_anh_7">&nbsp;</div>
+        <div class="responsive_anh_8">
+	        <div class="responsive_anh_bloq_center">
+    	        Agencia Nacional de Hidrocarburos | Av. 20 de Octubre Nro. 2685 | NIT: 120919027 | La Paz, Bolivia
+                Linea Gratuita: 800-10-6006 | Tel: (591)-2-2434000 | Fax: (591)-2-2434007 | Email: contacto @ anh.gob.bo<br/>
+                Desarrollo y mantenimiento: Dirección de Tecnologías de Información y Comunicación<br/>
+                AGENCIA NACIONAL DE HIDROCARBUROS © 2016<br/>
+            </div>
+        </div>
+        <div class="responsive_anh_9">&nbsp;</div>
+    <%--<table width="100%" cellpadding="0" cellspacing="0">
+        <tr>
+            <td style="text-align: center; background:#CCC;">
+                
+                
+            </td>
+        </tr>
+        <tr>
+            <td class="EstiloHeadLogin" height="180"></td>
+            
+        </tr>
+        <tr>
+            <td class="EstiloBody">
+                <table width="963" border="0" align="center" cellpadding="0" cellspacing="0" style="padding: 5px 10px 5px 5px"> 
+                    <tr>
+                        <td style="text-align: right; padding-right: 0px; padding-top: 10px;">
+                            
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 5px 5px 5px 5px;">
+                            
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="EstiloFoot" height="110" ></td>
+        </tr>
+    </table>--%>
+    </form>
+    <span id='tooltip' class='tooltip'></span>
+    <div runat="server" id="overlay" ClientIDMode="Static" runat="server">
+        &nbsp;</div>
+    <asp:Image ID="loading" ClientIDMode="Static" runat="server" ImageUrl="../UI/img/Volumenes/loading.gif" Width="32px"
+        Height="32px" />
+ </body>
+</html>

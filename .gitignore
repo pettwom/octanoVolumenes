@@ -1,0 +1,22 @@
+# Archivos de compilación y binarios
+[Bb]in/
+[Oo]bj/
+*.dll
+*.exe
+*.pdb
+*.user
+
+# Archivos de configuración de usuario de Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Archivos temporales de DevExpress o herramientas de diseño
+DXTempFolder/
+_ReSharper*/
+
+# Archivos de publicación
+*.publish.xml
+*.pubxml

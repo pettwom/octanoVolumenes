@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ServicioExternoInstitucion" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://10.201.0.220:86/ServicioExternoInstitucion.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://10.201.0.220:86/ServicioExternoInstitucion.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://10.201.0.220:86/ServicioExternoInstitucion.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Convenio.Core.Modelo.Dto.Proceso.ServicioExterno" />
+      <xsd:import schemaLocation="http://10.201.0.220:86/ServicioExternoInstitucion.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Framework.Comun.Resultado" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IServicioExternoInstitucion_ConsultaDatoPersonaCertificacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaDatoPersonaCertificacion" />
+  </wsdl:message>
+  <wsdl:message name="IServicioExternoInstitucion_ConsultaDatoPersonaCertificacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaDatoPersonaCertificacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioExternoInstitucion_ConsultaDatoPersonaEnJson_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaDatoPersonaEnJson" />
+  </wsdl:message>
+  <wsdl:message name="IServicioExternoInstitucion_ConsultaDatoPersonaEnJson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaDatoPersonaEnJsonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioExternoInstitucion_ConsultaDatoPersonaContrastacion_InputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaDatoPersonaContrastacion" />
+  </wsdl:message>
+  <wsdl:message name="IServicioExternoInstitucion_ConsultaDatoPersonaContrastacion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ConsultaDatoPersonaContrastacionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioExternoInstitucion_VerificacionImagenDocumentoCi_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerificacionImagenDocumentoCi" />
+  </wsdl:message>
+  <wsdl:message name="IServicioExternoInstitucion_VerificacionImagenDocumentoCi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerificacionImagenDocumentoCiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioExternoInstitucion_VerificacionImagenDocumentoCie_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerificacionImagenDocumentoCie" />
+  </wsdl:message>
+  <wsdl:message name="IServicioExternoInstitucion_VerificacionImagenDocumentoCie_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerificacionImagenDocumentoCieResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioExternoInstitucion_VerificacionImagenDocumentoLic_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerificacionImagenDocumentoLic" />
+  </wsdl:message>
+  <wsdl:message name="IServicioExternoInstitucion_VerificacionImagenDocumentoLic_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerificacionImagenDocumentoLicResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioExternoInstitucion_VerificacionImagenDocumentoLice_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerificacionImagenDocumentoLice" />
+  </wsdl:message>
+  <wsdl:message name="IServicioExternoInstitucion_VerificacionImagenDocumentoLice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerificacionImagenDocumentoLiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioExternoInstitucion_VerificacionDatoDocumentoCi_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerificacionDatoDocumentoCi" />
+  </wsdl:message>
+  <wsdl:message name="IServicioExternoInstitucion_VerificacionDatoDocumentoCi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerificacionDatoDocumentoCiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioExternoInstitucion_VerificacionDatoDocumentoCie_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerificacionDatoDocumentoCie" />
+  </wsdl:message>
+  <wsdl:message name="IServicioExternoInstitucion_VerificacionDatoDocumentoCie_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerificacionDatoDocumentoCieResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioExternoInstitucion_VerificacionDatoDocumentoLic_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerificacionDatoDocumentoLic" />
+  </wsdl:message>
+  <wsdl:message name="IServicioExternoInstitucion_VerificacionDatoDocumentoLic_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerificacionDatoDocumentoLicResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioExternoInstitucion_VerificacionDatoDocumentoLice_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerificacionDatoDocumentoLice" />
+  </wsdl:message>
+  <wsdl:message name="IServicioExternoInstitucion_VerificacionDatoDocumentoLice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerificacionDatoDocumentoLiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioExternoInstitucion_VerificacionDatoImagenDocumentoCi_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerificacionDatoImagenDocumentoCi" />
+  </wsdl:message>
+  <wsdl:message name="IServicioExternoInstitucion_VerificacionDatoImagenDocumentoCi_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerificacionDatoImagenDocumentoCiResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioExternoInstitucion_VerificacionDatoImagenDocumentoCie_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerificacionDatoImagenDocumentoCie" />
+  </wsdl:message>
+  <wsdl:message name="IServicioExternoInstitucion_VerificacionDatoImagenDocumentoCie_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerificacionDatoImagenDocumentoCieResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioExternoInstitucion_VerificacionDatoImagenDocumentoLic_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerificacionDatoImagenDocumentoLic" />
+  </wsdl:message>
+  <wsdl:message name="IServicioExternoInstitucion_VerificacionDatoImagenDocumentoLic_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerificacionDatoImagenDocumentoLicResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioExternoInstitucion_VerificacionDatoImagenDocumentoLice_InputMessage">
+    <wsdl:part name="parameters" element="tns:VerificacionDatoImagenDocumentoLice" />
+  </wsdl:message>
+  <wsdl:message name="IServicioExternoInstitucion_VerificacionDatoImagenDocumentoLice_OutputMessage">
+    <wsdl:part name="parameters" element="tns:VerificacionDatoImagenDocumentoLiceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IServicioExternoInstitucion_ObtenerDocumentoPorCodigoUnico_InputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerDocumentoPorCodigoUnico" />
+  </wsdl:message>
+  <wsdl:message name="IServicioExternoInstitucion_ObtenerDocumentoPorCodigoUnico_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ObtenerDocumentoPorCodigoUnicoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IServicioExternoInstitucion">
+    <wsdl:operation name="ConsultaDatoPersonaCertificacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/ConsultaDatoPersonaCertificacion" message="tns:IServicioExternoInstitucion_ConsultaDatoPersonaCertificacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/ConsultaDatoPersonaCertificacionResponse" message="tns:IServicioExternoInstitucion_ConsultaDatoPersonaCertificacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaDatoPersonaEnJson">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/ConsultaDatoPersonaEnJson" message="tns:IServicioExternoInstitucion_ConsultaDatoPersonaEnJson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/ConsultaDatoPersonaEnJsonResponse" message="tns:IServicioExternoInstitucion_ConsultaDatoPersonaEnJson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaDatoPersonaContrastacion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/ConsultaDatoPersonaContrastacion" message="tns:IServicioExternoInstitucion_ConsultaDatoPersonaContrastacion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/ConsultaDatoPersonaContrastacionResponse" message="tns:IServicioExternoInstitucion_ConsultaDatoPersonaContrastacion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerificacionImagenDocumentoCi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/VerificacionImagenDocumentoCi" message="tns:IServicioExternoInstitucion_VerificacionImagenDocumentoCi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/VerificacionImagenDocumentoCiResponse" message="tns:IServicioExternoInstitucion_VerificacionImagenDocumentoCi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerificacionImagenDocumentoCie">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/VerificacionImagenDocumentoCie" message="tns:IServicioExternoInstitucion_VerificacionImagenDocumentoCie_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/VerificacionImagenDocumentoCieResponse" message="tns:IServicioExternoInstitucion_VerificacionImagenDocumentoCie_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerificacionImagenDocumentoLic">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/VerificacionImagenDocumentoLic" message="tns:IServicioExternoInstitucion_VerificacionImagenDocumentoLic_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/VerificacionImagenDocumentoLicResponse" message="tns:IServicioExternoInstitucion_VerificacionImagenDocumentoLic_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerificacionImagenDocumentoLice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/VerificacionImagenDocumentoLice" message="tns:IServicioExternoInstitucion_VerificacionImagenDocumentoLice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/VerificacionImagenDocumentoLiceResponse" message="tns:IServicioExternoInstitucion_VerificacionImagenDocumentoLice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerificacionDatoDocumentoCi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/VerificacionDatoDocumentoCi" message="tns:IServicioExternoInstitucion_VerificacionDatoDocumentoCi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/VerificacionDatoDocumentoCiResponse" message="tns:IServicioExternoInstitucion_VerificacionDatoDocumentoCi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerificacionDatoDocumentoCie">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/VerificacionDatoDocumentoCie" message="tns:IServicioExternoInstitucion_VerificacionDatoDocumentoCie_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/VerificacionDatoDocumentoCieResponse" message="tns:IServicioExternoInstitucion_VerificacionDatoDocumentoCie_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerificacionDatoDocumentoLic">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/VerificacionDatoDocumentoLic" message="tns:IServicioExternoInstitucion_VerificacionDatoDocumentoLic_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/VerificacionDatoDocumentoLicResponse" message="tns:IServicioExternoInstitucion_VerificacionDatoDocumentoLic_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerificacionDatoDocumentoLice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/VerificacionDatoDocumentoLice" message="tns:IServicioExternoInstitucion_VerificacionDatoDocumentoLice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/VerificacionDatoDocumentoLiceResponse" message="tns:IServicioExternoInstitucion_VerificacionDatoDocumentoLice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerificacionDatoImagenDocumentoCi">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/VerificacionDatoImagenDocumentoCi" message="tns:IServicioExternoInstitucion_VerificacionDatoImagenDocumentoCi_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/VerificacionDatoImagenDocumentoCiResponse" message="tns:IServicioExternoInstitucion_VerificacionDatoImagenDocumentoCi_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerificacionDatoImagenDocumentoCie">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/VerificacionDatoImagenDocumentoCie" message="tns:IServicioExternoInstitucion_VerificacionDatoImagenDocumentoCie_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/VerificacionDatoImagenDocumentoCieResponse" message="tns:IServicioExternoInstitucion_VerificacionDatoImagenDocumentoCie_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerificacionDatoImagenDocumentoLic">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/VerificacionDatoImagenDocumentoLic" message="tns:IServicioExternoInstitucion_VerificacionDatoImagenDocumentoLic_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/VerificacionDatoImagenDocumentoLicResponse" message="tns:IServicioExternoInstitucion_VerificacionDatoImagenDocumentoLic_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="VerificacionDatoImagenDocumentoLice">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/VerificacionDatoImagenDocumentoLice" message="tns:IServicioExternoInstitucion_VerificacionDatoImagenDocumentoLice_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/VerificacionDatoImagenDocumentoLiceResponse" message="tns:IServicioExternoInstitucion_VerificacionDatoImagenDocumentoLice_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDocumentoPorCodigoUnico">
+      <wsdl:input wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/ObtenerDocumentoPorCodigoUnico" message="tns:IServicioExternoInstitucion_ObtenerDocumentoPorCodigoUnico_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IServicioExternoInstitucion/ObtenerDocumentoPorCodigoUnicoResponse" message="tns:IServicioExternoInstitucion_ObtenerDocumentoPorCodigoUnico_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="httpBasicConfig" type="tns:IServicioExternoInstitucion">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ConsultaDatoPersonaCertificacion">
+      <soap:operation soapAction="http://tempuri.org/IServicioExternoInstitucion/ConsultaDatoPersonaCertificacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaDatoPersonaEnJson">
+      <soap:operation soapAction="http://tempuri.org/IServicioExternoInstitucion/ConsultaDatoPersonaEnJson" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ConsultaDatoPersonaContrastacion">
+      <soap:operation soapAction="http://tempuri.org/IServicioExternoInstitucion/ConsultaDatoPersonaContrastacion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificacionImagenDocumentoCi">
+      <soap:operation soapAction="http://tempuri.org/IServicioExternoInstitucion/VerificacionImagenDocumentoCi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificacionImagenDocumentoCie">
+      <soap:operation soapAction="http://tempuri.org/IServicioExternoInstitucion/VerificacionImagenDocumentoCie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificacionImagenDocumentoLic">
+      <soap:operation soapAction="http://tempuri.org/IServicioExternoInstitucion/VerificacionImagenDocumentoLic" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificacionImagenDocumentoLice">
+      <soap:operation soapAction="http://tempuri.org/IServicioExternoInstitucion/VerificacionImagenDocumentoLice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificacionDatoDocumentoCi">
+      <soap:operation soapAction="http://tempuri.org/IServicioExternoInstitucion/VerificacionDatoDocumentoCi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificacionDatoDocumentoCie">
+      <soap:operation soapAction="http://tempuri.org/IServicioExternoInstitucion/VerificacionDatoDocumentoCie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificacionDatoDocumentoLic">
+      <soap:operation soapAction="http://tempuri.org/IServicioExternoInstitucion/VerificacionDatoDocumentoLic" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificacionDatoDocumentoLice">
+      <soap:operation soapAction="http://tempuri.org/IServicioExternoInstitucion/VerificacionDatoDocumentoLice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificacionDatoImagenDocumentoCi">
+      <soap:operation soapAction="http://tempuri.org/IServicioExternoInstitucion/VerificacionDatoImagenDocumentoCi" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificacionDatoImagenDocumentoCie">
+      <soap:operation soapAction="http://tempuri.org/IServicioExternoInstitucion/VerificacionDatoImagenDocumentoCie" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificacionDatoImagenDocumentoLic">
+      <soap:operation soapAction="http://tempuri.org/IServicioExternoInstitucion/VerificacionDatoImagenDocumentoLic" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="VerificacionDatoImagenDocumentoLice">
+      <soap:operation soapAction="http://tempuri.org/IServicioExternoInstitucion/VerificacionDatoImagenDocumentoLice" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ObtenerDocumentoPorCodigoUnico">
+      <soap:operation soapAction="http://tempuri.org/IServicioExternoInstitucion/ObtenerDocumentoPorCodigoUnico" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServicioExternoInstitucion">
+    <wsdl:port name="httpBasicConfig" binding="tns:httpBasicConfig">
+      <soap:address location="http://10.201.0.220:86/ServicioExternoInstitucion.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

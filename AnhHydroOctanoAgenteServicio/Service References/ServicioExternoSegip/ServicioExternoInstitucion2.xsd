@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Convenio.Core.Modelo.Dto.Proceso.ServicioExterno" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Convenio.Core.Modelo.Dto.Proceso.ServicioExterno" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.201.0.220:86/ServicioExternoInstitucion.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/Framework.Comun.Resultado" />
+  <xs:complexType name="RespuestaConsultaCertificacion">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="http://schemas.datacontract.org/2004/07/Framework.Comun.Resultado" base="q1:ResultadoExterno">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ReporteCertificacion" nillable="true" type="xs:base64Binary" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RespuestaConsultaCertificacion" nillable="true" type="tns:RespuestaConsultaCertificacion" />
+  <xs:complexType name="RespuestaConsultaJson">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="http://schemas.datacontract.org/2004/07/Framework.Comun.Resultado" base="q2:ResultadoExterno">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="DatosPersonaEnFormatoJson" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Fotografia" nillable="true" type="xs:base64Binary" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RespuestaConsultaJson" nillable="true" type="tns:RespuestaConsultaJson" />
+  <xs:complexType name="RespuestaConsultaContrastacion">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q3="http://schemas.datacontract.org/2004/07/Framework.Comun.Resultado" base="q3:ResultadoExterno">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ContrastacionEnFormatoJson" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RespuestaConsultaContrastacion" nillable="true" type="tns:RespuestaConsultaContrastacion" />
+  <xs:complexType name="RespuestaVerificacion">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q4="http://schemas.datacontract.org/2004/07/Framework.Comun.Resultado" base="q4:ResultadoExterno">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Reporte" nillable="true" type="xs:base64Binary" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RespuestaVerificacion" nillable="true" type="tns:RespuestaVerificacion" />
+  <xs:complexType name="RespuestaDocumento">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q5="http://schemas.datacontract.org/2004/07/Framework.Comun.Resultado" base="q5:BaseResultado">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Reporte" nillable="true" type="xs:base64Binary" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="RespuestaDocumento" nillable="true" type="tns:RespuestaDocumento" />
+</xs:schema>

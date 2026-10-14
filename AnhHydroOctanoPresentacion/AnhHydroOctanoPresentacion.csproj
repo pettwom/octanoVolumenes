@@ -1,0 +1,2132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B59B1486-3BD1-41E4-A166-09D11A819EC5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AnhHydroOctanoPresentacion</RootNamespace>
+    <AssemblyName>AnhHydroOctanoPresentacion</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort>1515</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
+    <TargetFrameworkProfile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=4.1.60501.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\Ajaxtoolkit\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AnhClases">
+      <HintPath>Dll\Librerias\AnhClases.dll</HintPath>
+    </Reference>
+    <Reference Include="AnhCore, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\AnhCore.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v15.1.Core, Version=15.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Dashboard.v15.1.Core, Version=15.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Dashboard.v15.1.Web, Version=15.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v15.1, Version=15.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v15.1, Version=15.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Map.v15.1.Core, Version=15.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v15.1.Core, Version=15.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.PivotGrid.v15.1.Core, Version=15.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Printing.v15.1.Core, Version=15.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.RichEdit.v15.1.Core, Version=15.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Sparkline.v15.1.Core, Version=15.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v15.1, Version=15.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxPivotGrid.v15.1, Version=15.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxRichEdit.v15.1, Version=15.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Web.ASPxScheduler.v15.1, Version=15.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxThemes.v15.1, Version=15.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.ASPxTreeList.v15.1, Version=15.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Web.v15.1, Version=15.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Xpo.v15.1, Version=15.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraBars.v15.1, Version=15.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v15.1, Version=15.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraCharts.v15.1.Web, Version=15.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v15.1, Version=15.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v15.1.Core, Version=15.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGauges.v15.1.Presets, Version=15.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v15.1.Win, Version=15.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraMap.v15.1, Version=15.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPivotGrid.v15.1, Version=15.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraPrinting.v15.1, Version=15.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v15.1, Version=15.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraReports.v15.1.Web, Version=15.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v15.1, Version=15.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v15.1.Core, Version=15.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraScheduler.v15.1.Reporting, Version=15.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraTreeList.v15.1, Version=15.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DTICUIDPPI001, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\AnhHydroOctanoPersistencia\Dll\DTICUIDPPI001.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.2.1.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\Itext\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xmlworker, Version=1.1.4.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\Itext\itextsharp.xmlworker.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp.xtra, Version=5.2.1.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\Itext\itextsharp.xtra.dll</HintPath>
+    </Reference>
+    <Reference Include="Librerias.Anh.Us, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\Librerias\Librerias.Anh.Us.dll</HintPath>
+    </Reference>
+    <Reference Include="Llaves.Anh.Dtic, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\Llaves\Llaves.Anh.Dtic.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Dll\Json\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Common">
+      <HintPath>..\packages\ServiceStack.Common.3.9.71\lib\net35\ServiceStack.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Interfaces">
+      <HintPath>..\packages\ServiceStack.Common.3.9.71\lib\net35\ServiceStack.Interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Text">
+      <HintPath>..\packages\ServiceStack.Text.3.9.71\lib\net35\ServiceStack.Text.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.1.8.2\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery.UI.Combined">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.UI.Combined.1.8.24\lib\net45\AspNet.ScriptManager.jQuery.UI.Combined.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax, Version=4.5.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.4.5.6\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms, Version=4.5.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.4.5.6\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.2\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.1.4.12333\lib\net40-full\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.1.4.12333\lib\net40-full\DotNetOpenAuth.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.1.4.12333\lib\net40-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.1.4.12333\lib\net40-full\DotNetOpenAuth.OpenId.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.1.4.12333\lib\net40-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.AspNet, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.1.4.12333\lib\net40-full\DotNetOpenAuth.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Membership.OpenAuth, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Membership.OpenAuth.1.0.1\lib\net45\Microsoft.AspNet.Membership.OpenAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.0.0\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.0\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Controles\CtrAnhDatosPersona.ascx" />
+    <Content Include="Controles\CtrDashbOctVol.ascx" />
+    <Content Include="Controles\CtrFichaTecnicaPrincipal.ascx" />
+    <Content Include="Controles\CtrFlujoOperadorGlp.ascx" />
+    <Content Include="Controles\CtrGestionUsuario.ascx" />
+    <Content Include="Controles\CtrDjConsolidacion.ascx" />
+    <Content Include="Controles\CtrImportacionDatosPDE.ascx" />
+    <Content Include="Controles\CtrImportadores.ascx" />
+    <Content Include="Controles\CtrImportarVolRef.ascx" />
+    <Content Include="Controles\CtrMonitoreoProde.ascx" />
+    <Content Include="Controles\CtrProde.ascx" />
+    <Content Include="Controles\CtrProgramacionProde.ascx" />
+    <Content Include="Controles\CtrRegAbastAndroid.ascx" />
+    <Content Include="Controles\CtrRegAbastecimiento.ascx" />
+    <Content Include="Controles\CtrRepConsumo.ascx" />
+    <Content Include="Controles\CtrRepConsumoUsuarioDirecto.ascx" />
+    <Content Include="Controles\CtrRepCumplRecepDiaVis.ascx" />
+    <Content Include="Controles\CtrRepIne.ascx" />
+    <Content Include="Controles\CtrRepMovimientoDdjj.ascx" />
+    <Content Include="Controles\CtrRepKardex.ascx" />
+    <Content Include="Controles\CtrFecheroMes.ascx" />
+    <Content Include="Controles\CtrComparativoInv.ascx" />
+    <Content Include="Controles\CtrRepDdjj.ascx" />
+    <Content Include="Controles\CtrRepMovimientoPAHL.ascx" />
+    <Content Include="Controles\CtrRepMovSaldo.ascx" />
+    <Content Include="Controles\CtrRepRank50.ascx" />
+    <Content Include="Controles\CtrRepRecExterno.ascx" />
+    <Content Include="Controles\CtrRepSaldoDia.ascx" />
+    <Content Include="Controles\CtrRepSuicDdjj.ascx" />
+    <Content Include="Controles\CtrRepVentasHora.ascx" />
+    <Content Include="Controles\CtrVisorAeroBsisa.ascx" />
+    <Content Include="Controles\CtrVisorDgac.ascx" />
+    <Content Include="Controles\CtrVisorAasana.ascx" />
+    <Content Include="Controles\CtrRepVisorGral.ascx" />
+    <Content Include="Controles\CtrIntegridad.ascx" />
+    <Content Include="Controles\CtrLogErrores.ascx" />
+    <Content Include="Controles\CtrPersonaSegip.ascx" />
+    <Content Include="Controles\CtrRepDosifGral.ascx" />
+    <Content Include="Controles\CtrRepDosificacion.ascx" />
+    <Content Include="Controles\CtrFlujoOperadorOrig.ascx" />
+    <Content Include="Controles\CtrManual.ascx" />
+    <Content Include="Controles\CtrRepCumplimientoMesVis.ascx" />
+    <Content Include="Controles\CtrRepGrafico.ascx" />
+    <Content Include="Controles\CtrRepCumplimientoDia.ascx" />
+    <Content Include="Controles\CtrRepMovimientoGral.ascx" />
+    <Content Include="Controles\CtrRecepciones.ascx" />
+    <Content Include="Controles\CtrTipoOperacion.ascx" />
+    <Content Include="Controles\CtrCondicionUso.ascx" />
+    <Content Include="Controles\CtrDatoPersona.ascx" />
+    <Content Include="Controles\CtrPrincipal.ascx" />
+    <Content Include="Controles\CtrRepCumplimientoMes.ascx" />
+    <Content Include="Controles\CtrDjMonitoreo.ascx" />
+    <Content Include="Controles\CtrDeclaracionJurada.ascx" />
+    <Content Include="Controles\CtrFlujoOperador.ascx" />
+    <Content Include="Controles\CtrImportacionDatos.ascx" />
+    <Content Include="Controles\CtrVisorAeronave.ascx" />
+    <Content Include="Controles\CtrVisorPahl.ascx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Dll\Ajaxtoolkit\AjaxControlToolkit.dll" />
+    <Content Include="Dll\AnhClases.dll" />
+    <Content Include="Dll\AnhCore.dll" />
+    <Content Include="Dll\AnhDominio.dll" />
+    <Content Include="Dll\Itext\itextsharp.dll" />
+    <Content Include="Dll\Itext\itextsharp.xmlworker.dll" />
+    <Content Include="Dll\Itext\itextsharp.xtra.dll" />
+    <Content Include="Dll\Json\Newtonsoft.Json.dll" />
+    <Content Include="Dll\Json\Newtonsoft.Json.pdb" />
+    <Content Include="Dll\Json\Newtonsoft.Json.xml" />
+    <Content Include="Dll\Json\Recaptcha.dll" />
+    <Content Include="Dll\Librerias\AnhClases.dll" />
+    <Content Include="Dll\Librerias\AnhCore.dll" />
+    <Content Include="Dll\Librerias\AnhDominio.dll" />
+    <Content Include="Dll\Librerias\Librerias.Anh.Us.dll" />
+    <Content Include="Dll\Librerias\Oracle.ManagedDataAccess.dll" />
+    <Content Include="Dll\Librerias\protobuf-net.dll" />
+    <Content Include="Dll\Librerias\protobuf-net.pdb" />
+    <Content Include="Dll\Librerias\protobuf-net.xml" />
+    <Content Include="Dll\Llaves\Llaves.Anh.Dtic.dll" />
+    <Content Include="favicon.ico" />
+    <Content Include="packages.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Sitio\AeroBsisa\WFImportarVolRef.aspx" />
+    <Content Include="Sitio\AeroBsisa\WFVisorAeroBsisa.aspx" />
+    <Content Include="Sitio\AeroBsisa\WFVisorDgac.aspx" />
+    <Content Include="Sitio\AeroBsisa\WFVisorAasana.aspx" />
+    <Content Include="Sitio\AeroBsisa\WFVisorAeronave.aspx" />
+    <Content Include="Sitio\Movimientos\WFDashbOctVol.aspx" />
+    <Content Include="Sitio\Movimientos\WFDjConsolidacion.aspx" />
+    <Content Include="Sitio\Movimientos\WFFlujoOperadorGlp.aspx" />
+    <Content Include="Sitio\Movimientos\WFProgramacionProde.aspx" />
+    <Content Include="Sitio\Movimientos\WFRendimientosVolumetricos.aspx" />
+    <Content Include="Sitio\Movimientos\WFImcidentes.aspx" />
+    <Content Include="Sitio\Movimientos\WFImportadores.aspx" />
+    <Content Include="Sitio\Movimientos\WFMonitoreoProde.aspx" />
+    <Content Include="Sitio\Movimientos\WFProde.aspx" />
+    <Content Include="Sitio\Movimientos\WFRepConsumo.aspx" />
+    <Content Include="Sitio\Movimientos\WFRepConsumoUsuarioDirecto.aspx" />
+    <Content Include="Sitio\Movimientos\WFRepCumplRecepDiaVis.aspx" />
+    <Content Include="Sitio\Movimientos\WFRepIne.aspx" />
+    <Content Include="Sitio\Movimientos\WFRepMovimientoDdjj.aspx" />
+    <Content Include="Sitio\Movimientos\WFRepKardex.aspx" />
+    <Content Include="Sitio\Movimientos\WFComparativoInv.aspx" />
+    <Content Include="Sitio\Movimientos\WFRepDdjj.aspx" />
+    <Content Include="Sitio\Movimientos\WFRepMovimientoSaldo.aspx" />
+    <Content Include="Sitio\Movimientos\WFRepMovImpEntidad.aspx" />
+    <Content Include="Sitio\Movimientos\WFRepMovImpInsumos.aspx" />
+    <Content Include="Sitio\Movimientos\WFRepMovSaldo.aspx" />
+    <Content Include="Sitio\Movimientos\WFRepRank50.aspx" />
+    <Content Include="Sitio\Movimientos\WFRepRecExterno.aspx" />
+    <Content Include="Sitio\Movimientos\WFRepSaldoDia.aspx" />
+    <Content Include="Sitio\Movimientos\WFRepSuicDdjj.aspx" />
+    <Content Include="Sitio\Movimientos\WFRepVentaHora.aspx" />
+    <Content Include="Sitio\Movimientos\WFRepVisorGral.aspx" />
+    <Content Include="Sitio\Movimientos\WFIntegridad.aspx" />
+    <Content Include="Sitio\Movimientos\WFLogErrores.aspx" />
+    <Content Include="Sitio\Movimientos\WFRepDosifGral.aspx" />
+    <Content Include="Sitio\Movimientos\WFRepDosificacion.aspx" />
+    <Content Include="Sitio\Movimientos\WFManual.aspx" />
+    <Content Include="Sitio\Movimientos\WFRepCumplimientoMesVis.aspx" />
+    <Content Include="Sitio\Movimientos\WFRepGrafico.aspx" />
+    <Content Include="Sitio\Movimientos\WFRepCumplimientoDia.aspx" />
+    <Content Include="Sitio\Movimientos\WFRepMovimientoGral.aspx" />
+    <Content Include="Sitio\Movimientos\WFRecepciones.aspx" />
+    <Content Include="Sitio\Movimientos\WFDescargaRendimVolumetrico.aspx" />
+    <Content Include="Sitio\Movimientos\WFTipoOperacion.aspx" />
+    <Content Include="Sitio\Movimientos\WFDjMonitoreo.aspx" />
+    <Content Include="Sitio\Movimientos\WFDeclaracionJurada.aspx" />
+    <Content Include="Sitio\Movimientos\WFCondicionUso.aspx" />
+    <Content Include="Sitio\Movimientos\WFPrincipal.aspx" />
+    <Content Include="Sitio\Movimientos\WFDescarga.aspx" />
+    <Content Include="Sitio\Movimientos\WFReporte.aspx" />
+    <Content Include="Sitio\Movimientos\WFRepCumplimientoMes.aspx" />
+    <Content Include="Sitio\Movimientos\WFImportacionDatos.aspx" />
+    <Content Include="Sitio\PAHL\WFRepMovimientoPAHL.aspx" />
+    <Content Include="Sitio\PAHL\WFVisorPahl.aspx" />
+    <Content Include="Sitio\Persona\wfAutenticacion.aspx" />
+    <Content Include="Sitio\Persona\wfSalir.aspx" />
+    <Content Include="Sitio\Movimientos\WFFlujoOperador.aspx" />
+    <Content Include="Sitio\Reportes\cabecera.png" />
+    <Content Include="Sitio\Reportes\repFichaTecnicaPrincipal.aspx" />
+    <Content Include="Sitio\Usuarios\wfAdministrarUsuario.aspx" />
+    <Content Include="Sitio\Usuarios\WFGestionUsuario.aspx" />
+    <Content Include="UI\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="UI\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="UI\bootstrap\css\bootstrap.css" />
+    <Content Include="UI\bootstrap\css\bootstrap.min.css" />
+    <Content Include="UI\bootstrap\css\font-awesome.min.css" />
+    <Content Include="UI\bootstrap\css\simple-sidebar.css" />
+    <Content Include="UI\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="UI\bootstrap\js\bootstrap.js" />
+    <Content Include="UI\bootstrap\js\bootstrap.min.js" />
+    <Content Include="UI\bootstrap\js\jquery-ui-1.10.3.custom.js" />
+    <Content Include="UI\bootstrap\js\jquery-ui-1.10.3.custom.min.js" />
+    <Content Include="UI\bootstrap\js\npm.js" />
+    <Content Include="UI\css\chosen-sprite.png" />
+    <Content Include="UI\css\chosen.css" />
+    <Content Include="UI\css\dataTables.tableTools.min.css" />
+    <Content Include="UI\css\demo_page.css" />
+    <Content Include="UI\css\demo_table.css" />
+    <Content Include="UI\css\demo_table_jui.css" />
+    <Content Include="UI\css\DevGlp\CardView\cvHeaderBack.png" />
+    <Content Include="UI\css\DevGlp\CardView\cvPagerPanelBack.png" />
+    <Content Include="UI\css\DevGlp\CardView\cvTitleBack.png" />
+    <Content Include="UI\css\DevGlp\CardView\sprite.css" />
+    <Content Include="UI\css\DevGlp\CardView\sprite.png" />
+    <Content Include="UI\css\DevGlp\CardView\StatusBarLoading.gif" />
+    <Content Include="UI\css\DevGlp\CardView\styles.css" />
+    <Content Include="UI\css\DevGlp\Editors\caChallengeImageBack.png" />
+    <Content Include="UI\css\DevGlp\Editors\edtBtnBack.png" />
+    <Content Include="UI\css\DevGlp\Editors\edtBtnDisabledBack.png" />
+    <Content Include="UI\css\DevGlp\Editors\edtBtnHBack.png" />
+    <Content Include="UI\css\DevGlp\Editors\edtBtnPBack.png" />
+    <Content Include="UI\css\DevGlp\Editors\edtDropDownBtnHBack.png" />
+    <Content Include="UI\css\DevGlp\Editors\edtDropDownBtnPBack.png" />
+    <Content Include="UI\css\DevGlp\Editors\edtProgressBack.png" />
+    <Content Include="UI\css\DevGlp\Editors\edtProgressIndicatorBack.png" />
+    <Content Include="UI\css\DevGlp\Editors\edtTokenBoxTokenBackground.png" />
+    <Content Include="UI\css\DevGlp\Editors\edtTrackBarBarHighlightH.gif" />
+    <Content Include="UI\css\DevGlp\Editors\edtTrackBarBarHighlightV.gif" />
+    <Content Include="UI\css\DevGlp\Editors\edtTrackBarDoubleLargeTickH.gif" />
+    <Content Include="UI\css\DevGlp\Editors\edtTrackBarDoubleLargeTickV.gif" />
+    <Content Include="UI\css\DevGlp\Editors\edtTrackBarDoubleSmallTickH.gif" />
+    <Content Include="UI\css\DevGlp\Editors\edtTrackBarDoubleSmallTickV.gif" />
+    <Content Include="UI\css\DevGlp\Editors\edtTrackBarLargeTickH.gif" />
+    <Content Include="UI\css\DevGlp\Editors\edtTrackBarLargeTickV.gif" />
+    <Content Include="UI\css\DevGlp\Editors\edtTrackBarSmallTickH.gif" />
+    <Content Include="UI\css\DevGlp\Editors\edtTrackBarSmallTickV.gif" />
+    <Content Include="UI\css\DevGlp\Editors\edtTrackBarTrackH.gif" />
+    <Content Include="UI\css\DevGlp\Editors\edtTrackBarTrackV.gif" />
+    <Content Include="UI\css\DevGlp\Editors\lbHeaderBack.png" />
+    <Content Include="UI\css\DevGlp\Editors\sprite.css" />
+    <Content Include="UI\css\DevGlp\Editors\sprite.png" />
+    <Content Include="UI\css\DevGlp\Editors\styles.css" />
+    <Content Include="UI\css\DevGlp\GridView\gvPagerPanelBack.png" />
+    <Content Include="UI\css\DevGlp\GridView\gvTitleBack.png" />
+    <Content Include="UI\css\DevGlp\GridView\sprite.css" />
+    <Content Include="UI\css\DevGlp\GridView\sprite.png" />
+    <Content Include="UI\css\DevGlp\GridView\StatusBarLoading.gif" />
+    <Content Include="UI\css\DevGlp\GridView\styles.css" />
+    <Content Include="UI\css\DevGlp\PivotGrid\HeaderBack.png" />
+    <Content Include="UI\css\DevGlp\PivotGrid\HeaderHoverBack.png" />
+    <Content Include="UI\css\DevGlp\PivotGrid\PagerBack.png" />
+    <Content Include="UI\css\DevGlp\PivotGrid\pcHBack.png" />
+    <Content Include="UI\css\DevGlp\PivotGrid\sprite.css" />
+    <Content Include="UI\css\DevGlp\PivotGrid\sprite.png" />
+    <Content Include="UI\css\DevGlp\PivotGrid\styles.css" />
+    <Content Include="UI\css\DevGlp\PivotGrid\TitleBack.png" />
+    <Content Include="UI\css\DevGlp\PivotGrid\tvNodeLoading.gif" />
+    <Content Include="UI\css\DevGlp\TreeList\CssImages\AltBack.png" />
+    <Content Include="UI\css\DevGlp\TreeList\CssImages\ControlBack.png" />
+    <Content Include="UI\css\DevGlp\TreeList\CssImages\PagerBack.png" />
+    <Content Include="UI\css\DevGlp\TreeList\CssImages\PreviewBack.png" />
+    <Content Include="UI\css\DevGlp\TreeList\CssImages\TitleBack.png" />
+    <Content Include="UI\css\DevGlp\TreeList\sprite.css" />
+    <Content Include="UI\css\DevGlp\TreeList\sprite.png" />
+    <Content Include="UI\css\DevGlp\TreeList\styles.css" />
+    <Content Include="UI\css\DevGlp\Web\dvItemBack.png" />
+    <Content Include="UI\css\DevGlp\Web\dvPagerPanelBack.png" />
+    <Content Include="UI\css\DevGlp\Web\dvPagerPanelSpacingBack.png" />
+    <Content Include="UI\css\DevGlp\Web\edtBtnBack.png" />
+    <Content Include="UI\css\DevGlp\Web\edtBtnDisabledBack.png" />
+    <Content Include="UI\css\DevGlp\Web\edtBtnHBack.png" />
+    <Content Include="UI\css\DevGlp\Web\fmFileCheck.png" />
+    <Content Include="UI\css\DevGlp\Web\fmSplitterSeparator.gif" />
+    <Content Include="UI\css\DevGlp\Web\igLoading.gif" />
+    <Content Include="UI\css\DevGlp\Web\igNavBtnsBack.png" />
+    <Content Include="UI\css\DevGlp\Web\isLoading.gif" />
+    <Content Include="UI\css\DevGlp\Web\Loading.gif" />
+    <Content Include="UI\css\DevGlp\Web\mHorzItemSepBack.png" />
+    <Content Include="UI\css\DevGlp\Web\mHorzLargeItemSepBack.png" />
+    <Content Include="UI\css\DevGlp\Web\mItemBack.png" />
+    <Content Include="UI\css\DevGlp\Web\mItemHBack.png" />
+    <Content Include="UI\css\DevGlp\Web\mItemSBack.png" />
+    <Content Include="UI\css\DevGlp\Web\mScrollHBack.png" />
+    <Content Include="UI\css\DevGlp\Web\mScrollPBack.png" />
+    <Content Include="UI\css\DevGlp\Web\mSubItemHBack.png" />
+    <Content Include="UI\css\DevGlp\Web\mSubItemSepBack.png" />
+    <Content Include="UI\css\DevGlp\Web\mVertItemSepBack.png" />
+    <Content Include="UI\css\DevGlp\Web\nbHBack.png" />
+    <Content Include="UI\css\DevGlp\Web\nbIHBack.png" />
+    <Content Include="UI\css\DevGlp\Web\nbISBack.png" />
+    <Content Include="UI\css\DevGlp\Web\ncPagerPanelSpacingBack.png" />
+    <Content Include="UI\css\DevGlp\Web\pcFBack.png" />
+    <Content Include="UI\css\DevGlp\Web\pcHBack.png" />
+    <Content Include="UI\css\DevGlp\Web\pDropDownButtonHoverBack.png" />
+    <Content Include="UI\css\DevGlp\Web\pDropDownButtonPressedBack.png" />
+    <Content Include="UI\css\DevGlp\Web\pSepBack.png" />
+    <Content Include="UI\css\DevGlp\Web\rcMapImage.png" />
+    <Content Include="UI\css\DevGlp\Web\rFileTabBack.png" />
+    <Content Include="UI\css\DevGlp\Web\rFileTabHoverBack.png" />
+    <Content Include="UI\css\DevGlp\Web\rFileTabPressedBack.png" />
+    <Content Include="UI\css\DevGlp\Web\rGroupSepBack.png" />
+    <Content Include="UI\css\DevGlp\Web\rItemHBack.png" />
+    <Content Include="UI\css\DevGlp\Web\rItemSBack.png" />
+    <Content Include="UI\css\DevGlp\Web\rpHBack.png" />
+    <Content Include="UI\css\DevGlp\Web\splHSepHBack.png" />
+    <Content Include="UI\css\DevGlp\Web\splResizingPointer.gif" />
+    <Content Include="UI\css\DevGlp\Web\splVSepHBack.png" />
+    <Content Include="UI\css\DevGlp\Web\sprite.css" />
+    <Content Include="UI\css\DevGlp\Web\sprite.png" />
+    <Content Include="UI\css\DevGlp\Web\styles.css" />
+    <Content Include="UI\css\DevGlp\Web\tcTabBack.png" />
+    <Content Include="UI\css\DevGlp\Web\tcTabHoverBack.png" />
+    <Content Include="UI\css\DevGlp\Web\tiFBBack.png" />
+    <Content Include="UI\css\DevGlp\Web\tiHBack.png" />
+    <Content Include="UI\css\DevGlp\Web\tvNodeLoading.gif" />
+    <Content Include="UI\css\DevGlp\Web\ucButtonBack.png" />
+    <Content Include="UI\css\DevGlp\Web\ucButtonDisabledBack.png" />
+    <Content Include="UI\css\DevGlp\Web\ucButtonHoverBack.png" />
+    <Content Include="UI\css\DevGlp\Web\ucButtonPressedBack.png" />
+    <Content Include="UI\css\DevGlp\Web\ucProgressBack.png" />
+    <Content Include="UI\css\DevGlp\Web\ucProgressIndicatorBack.png" />
+    <Content Include="UI\css\fancybox_loading.gif" />
+    <Content Include="UI\css\fancybox_overlay.png" />
+    <Content Include="UI\css\fancybox_sprite.png" />
+    <Content Include="UI\css\Fonts\Battlefield.svg" />
+    <Content Include="UI\css\Fonts\glyphicons-regular.svg" />
+    <Content Include="UI\css\Fonts\GOTHIC.svg" />
+    <Content Include="UI\css\Fonts\icons-regular.svg" />
+    <Content Include="UI\css\Hydro.css" />
+    <Content Include="UI\css\HydroNuevo.css" />
+    <Content Include="UI\css\hydro_login.css" />
+    <Content Include="UI\css\icons.css" />
+    <Content Include="UI\css\jquery-ui-1.10.3.custom.min.css" />
+    <Content Include="UI\css\jquery.dataTables.css" />
+    <Content Include="UI\css\jquery.fancybox.2.1.5.css" />
+    <Content Include="UI\css\jquery.fancybox.css" />
+    <Content Include="UI\css\msgBoxLight.css" />
+    <Content Include="UI\css\sidebar.css" />
+    <Content Include="UI\css\sisgen.css" />
+    <Content Include="UI\css\Site.css" />
+    <Content Include="UI\css\skin.css" />
+    <Content Include="UI\css\SlickGrid\slick-default-theme.css" />
+    <Content Include="UI\css\SlickGrid\slick.grid.css" />
+    <Content Include="UI\css\SlickGrid\slick.grid.excel.css" />
+    <Content Include="UI\css\tablas.css" />
+    <Content Include="UI\css\TableTools.css" />
+    <Content Include="UI\css\Volumenes\iconos20120607.png" />
+    <Content Include="UI\css\Volumenes\jquery.treeview.css" />
+    <Content Include="UI\css\Volumenes\loading.gif" />
+    <Content Include="UI\css\Volumenes\MenuHydroOctano.css" />
+    <Content Include="UI\css\Volumenes\VolumenesCalidad.css" />
+    <Content Include="UI\fonts\Battlefield.svg" />
+    <Content Include="UI\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="UI\fonts\icons-regular.svg" />
+    <Content Include="UI\highcharts\code\css\highcharts.css" />
+    <Content Include="UI\highcharts\code\highcharts-3d.js" />
+    <Content Include="UI\highcharts\code\highcharts-3d.src.js" />
+    <Content Include="UI\highcharts\code\highcharts-more.js" />
+    <Content Include="UI\highcharts\code\highcharts-more.src.js" />
+    <Content Include="UI\highcharts\code\highcharts.js" />
+    <Content Include="UI\highcharts\code\highcharts.src.js" />
+    <Content Include="UI\highcharts\code\js\highcharts-3d.js" />
+    <Content Include="UI\highcharts\code\js\highcharts-3d.src.js" />
+    <Content Include="UI\highcharts\code\js\highcharts-more.js" />
+    <Content Include="UI\highcharts\code\js\highcharts-more.src.js" />
+    <Content Include="UI\highcharts\code\js\highcharts.js" />
+    <Content Include="UI\highcharts\code\js\highcharts.src.js" />
+    <Content Include="UI\highcharts\code\js\modules\accessibility.js" />
+    <Content Include="UI\highcharts\code\js\modules\accessibility.src.js" />
+    <Content Include="UI\highcharts\code\js\modules\annotations.js" />
+    <Content Include="UI\highcharts\code\js\modules\annotations.src.js" />
+    <Content Include="UI\highcharts\code\js\modules\boost-canvas.js" />
+    <Content Include="UI\highcharts\code\js\modules\boost-canvas.src.js" />
+    <Content Include="UI\highcharts\code\js\modules\boost.js" />
+    <Content Include="UI\highcharts\code\js\modules\boost.src.js" />
+    <Content Include="UI\highcharts\code\js\modules\broken-axis.js" />
+    <Content Include="UI\highcharts\code\js\modules\broken-axis.src.js" />
+    <Content Include="UI\highcharts\code\js\modules\data.js" />
+    <Content Include="UI\highcharts\code\js\modules\data.src.js" />
+    <Content Include="UI\highcharts\code\js\modules\drilldown.js" />
+    <Content Include="UI\highcharts\code\js\modules\drilldown.src.js" />
+    <Content Include="UI\highcharts\code\js\modules\export-data.js" />
+    <Content Include="UI\highcharts\code\js\modules\export-data.src.js" />
+    <Content Include="UI\highcharts\code\js\modules\exporting.js" />
+    <Content Include="UI\highcharts\code\js\modules\exporting.src.js" />
+    <Content Include="UI\highcharts\code\js\modules\funnel.js" />
+    <Content Include="UI\highcharts\code\js\modules\funnel.src.js" />
+    <Content Include="UI\highcharts\code\js\modules\gantt.js" />
+    <Content Include="UI\highcharts\code\js\modules\gantt.src.js" />
+    <Content Include="UI\highcharts\code\js\modules\grid-axis.js" />
+    <Content Include="UI\highcharts\code\js\modules\grid-axis.src.js" />
+    <Content Include="UI\highcharts\code\js\modules\heatmap.js" />
+    <Content Include="UI\highcharts\code\js\modules\heatmap.src.js" />
+    <Content Include="UI\highcharts\code\js\modules\no-data-to-display.js" />
+    <Content Include="UI\highcharts\code\js\modules\no-data-to-display.src.js" />
+    <Content Include="UI\highcharts\code\js\modules\offline-exporting.js" />
+    <Content Include="UI\highcharts\code\js\modules\offline-exporting.src.js" />
+    <Content Include="UI\highcharts\code\js\modules\overlapping-datalabels.js" />
+    <Content Include="UI\highcharts\code\js\modules\overlapping-datalabels.src.js" />
+    <Content Include="UI\highcharts\code\js\modules\series-label.js" />
+    <Content Include="UI\highcharts\code\js\modules\series-label.src.js" />
+    <Content Include="UI\highcharts\code\js\modules\solid-gauge.js" />
+    <Content Include="UI\highcharts\code\js\modules\solid-gauge.src.js" />
+    <Content Include="UI\highcharts\code\js\modules\static-scale.js" />
+    <Content Include="UI\highcharts\code\js\modules\static-scale.src.js" />
+    <Content Include="UI\highcharts\code\js\modules\stock.js" />
+    <Content Include="UI\highcharts\code\js\modules\stock.src.js" />
+    <Content Include="UI\highcharts\code\js\modules\treemap.js" />
+    <Content Include="UI\highcharts\code\js\modules\treemap.src.js" />
+    <Content Include="UI\highcharts\code\js\modules\xrange-series.js" />
+    <Content Include="UI\highcharts\code\js\modules\xrange-series.src.js" />
+    <Content Include="UI\highcharts\code\js\themes\dark-blue.js" />
+    <Content Include="UI\highcharts\code\js\themes\dark-green.js" />
+    <Content Include="UI\highcharts\code\js\themes\dark-unica.js" />
+    <Content Include="UI\highcharts\code\js\themes\gray.js" />
+    <Content Include="UI\highcharts\code\js\themes\grid-light.js" />
+    <Content Include="UI\highcharts\code\js\themes\grid.js" />
+    <Content Include="UI\highcharts\code\js\themes\sand-signika.js" />
+    <Content Include="UI\highcharts\code\js\themes\skies.js" />
+    <Content Include="UI\highcharts\code\lib\canvg.js" />
+    <Content Include="UI\highcharts\code\lib\canvg.src.js" />
+    <Content Include="UI\highcharts\code\lib\jspdf.js" />
+    <Content Include="UI\highcharts\code\lib\jspdf.src.js" />
+    <Content Include="UI\highcharts\code\lib\rgbcolor.js" />
+    <Content Include="UI\highcharts\code\lib\rgbcolor.src.js" />
+    <Content Include="UI\highcharts\code\lib\svg2pdf.js" />
+    <Content Include="UI\highcharts\code\lib\svg2pdf.src.js" />
+    <Content Include="UI\highcharts\code\modules\accessibility.js" />
+    <Content Include="UI\highcharts\code\modules\accessibility.src.js" />
+    <Content Include="UI\highcharts\code\modules\annotations.js" />
+    <Content Include="UI\highcharts\code\modules\annotations.src.js" />
+    <Content Include="UI\highcharts\code\modules\boost-canvas.js" />
+    <Content Include="UI\highcharts\code\modules\boost-canvas.src.js" />
+    <Content Include="UI\highcharts\code\modules\boost.js" />
+    <Content Include="UI\highcharts\code\modules\boost.src.js" />
+    <Content Include="UI\highcharts\code\modules\broken-axis.js" />
+    <Content Include="UI\highcharts\code\modules\broken-axis.src.js" />
+    <Content Include="UI\highcharts\code\modules\data.js" />
+    <Content Include="UI\highcharts\code\modules\data.src.js" />
+    <Content Include="UI\highcharts\code\modules\drilldown.js" />
+    <Content Include="UI\highcharts\code\modules\drilldown.src.js" />
+    <Content Include="UI\highcharts\code\modules\export-data.js" />
+    <Content Include="UI\highcharts\code\modules\export-data.src.js" />
+    <Content Include="UI\highcharts\code\modules\exporting.js" />
+    <Content Include="UI\highcharts\code\modules\exporting.src.js" />
+    <Content Include="UI\highcharts\code\modules\funnel.js" />
+    <Content Include="UI\highcharts\code\modules\funnel.src.js" />
+    <Content Include="UI\highcharts\code\modules\gantt.js" />
+    <Content Include="UI\highcharts\code\modules\gantt.src.js" />
+    <Content Include="UI\highcharts\code\modules\grid-axis.js" />
+    <Content Include="UI\highcharts\code\modules\grid-axis.src.js" />
+    <Content Include="UI\highcharts\code\modules\heatmap.js" />
+    <Content Include="UI\highcharts\code\modules\heatmap.src.js" />
+    <Content Include="UI\highcharts\code\modules\no-data-to-display.js" />
+    <Content Include="UI\highcharts\code\modules\no-data-to-display.src.js" />
+    <Content Include="UI\highcharts\code\modules\offline-exporting.js" />
+    <Content Include="UI\highcharts\code\modules\offline-exporting.src.js" />
+    <Content Include="UI\highcharts\code\modules\overlapping-datalabels.js" />
+    <Content Include="UI\highcharts\code\modules\overlapping-datalabels.src.js" />
+    <Content Include="UI\highcharts\code\modules\series-label.js" />
+    <Content Include="UI\highcharts\code\modules\series-label.src.js" />
+    <Content Include="UI\highcharts\code\modules\solid-gauge.js" />
+    <Content Include="UI\highcharts\code\modules\solid-gauge.src.js" />
+    <Content Include="UI\highcharts\code\modules\static-scale.js" />
+    <Content Include="UI\highcharts\code\modules\static-scale.src.js" />
+    <Content Include="UI\highcharts\code\modules\stock.js" />
+    <Content Include="UI\highcharts\code\modules\stock.src.js" />
+    <Content Include="UI\highcharts\code\modules\treemap.js" />
+    <Content Include="UI\highcharts\code\modules\treemap.src.js" />
+    <Content Include="UI\highcharts\code\modules\xrange-series.js" />
+    <Content Include="UI\highcharts\code\modules\xrange-series.src.js" />
+    <Content Include="UI\highcharts\code\readme.txt" />
+    <Content Include="UI\highcharts\code\themes\dark-blue.js" />
+    <Content Include="UI\highcharts\code\themes\dark-green.js" />
+    <Content Include="UI\highcharts\code\themes\dark-unica.js" />
+    <Content Include="UI\highcharts\code\themes\gray.js" />
+    <Content Include="UI\highcharts\code\themes\grid-light.js" />
+    <Content Include="UI\highcharts\code\themes\grid.js" />
+    <Content Include="UI\highcharts\code\themes\sand-signika.js" />
+    <Content Include="UI\highcharts\code\themes\skies.js" />
+    <Content Include="UI\img\anh\anh.png" />
+    <Content Include="UI\img\anh_logo.png" />
+    <Content Include="UI\img\bg.jpg" />
+    <Content Include="UI\img\btn_usuario.png" />
+    <Content Include="UI\img\fondo1.jpg" />
+    <Content Include="UI\img\hydro_logo.png" />
+    <Content Include="UI\img\icono_modificarEstado.png" />
+    <Content Include="UI\img\marcas\azul.png" />
+    <Content Include="UI\img\marcas\eess_cl.png" />
+    <Content Include="UI\img\marcas\eess_cl0.png" />
+    <Content Include="UI\img\marcas\eess_cl1.png" />
+    <Content Include="UI\img\marcas\eess_cl2.png" />
+    <Content Include="UI\img\marcas\eess_cl3.png" />
+    <Content Include="UI\img\marcas\eess_off.png" />
+    <Content Include="UI\img\marcas\eess_off0.png" />
+    <Content Include="UI\img\marcas\eess_off1.png" />
+    <Content Include="UI\img\marcas\eess_off2.png" />
+    <Content Include="UI\img\marcas\morado.png" />
+    <Content Include="UI\img\marcas\naranja.png" />
+    <Content Include="UI\img\marcas\plomo.png" />
+    <Content Include="UI\img\marcas\rojo.png" />
+    <Content Include="UI\img\marcas\verde_claro.png" />
+    <Content Include="UI\img\marcas\verde_oscuro.png" />
+    <Content Include="UI\img\nacho.png" />
+    <Content Include="UI\img\silueta.jpg" />
+    <Content Include="UI\img\title_frame.png" />
+    <Content Include="UI\img\Volumenes\cabecera.png" />
+    <Content Include="UI\img\Volumenes\cargando.gif" />
+    <Content Include="UI\img\Volumenes\loading.gif" />
+    <Content Include="UI\img\Volumenes\logoOctanoVolumenes.png" />
+    <Content Include="UI\img\Volumenes\logoOctanoVolumenes3.png" />
+    <Content Include="UI\img\Volumenes\logoOctanoVolumenes4.png" />
+    <Content Include="UI\img\Volumenes\octano128.ico" />
+    <Content Include="UI\img\Volumenes\page_add.png" />
+    <Content Include="UI\img\Volumenes\page_edit.png" />
+    <Content Include="UI\js\bootbox.min.js" />
+    <Content Include="UI\js\chosen.jquery.js" />
+    <Content Include="UI\js\highcharts.js" />
+    <Content Include="Sitio\Site.Master" />
+    <Content Include="Parametros\CAppSettings.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>CAppSettings.cs</LastGenOutput>
+    </Content>
+    <Content Include="Entidades\ModeloOctanoMovimiento.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ModeloOctanoMovimiento.cs</LastGenOutput>
+    </Content>
+    <Content Include="Entidades\RequestDTO.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>RequestDTO.cs</LastGenOutput>
+    </Content>
+    <Content Include="Sitio\ANH.Master" />
+    <None Include="Properties\PublishProfiles\Local.pubxml" />
+    <None Include="Properties\PublishProfiles\PUB_DES.pubxml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="UI\css\Fonts\.DS_Store" />
+    <Content Include="UI\css\Fonts\glyphicons-regular.eot" />
+    <Content Include="UI\css\Fonts\glyphicons-regular.otf" />
+    <Content Include="UI\css\Fonts\glyphicons-regular.ttf" />
+    <Content Include="UI\css\Fonts\glyphicons-regular.woff" />
+    <Content Include="UI\css\Fonts\GOTHIC.eot" />
+    <Content Include="UI\css\Fonts\GOTHIC.otf" />
+    <Content Include="UI\css\Fonts\GOTHIC.ttf" />
+    <Content Include="UI\css\Fonts\GOTHIC.woff" />
+    <Content Include="Sitio\Manuales\OctVol_ManualUsuario.pdf" />
+    <Content Include="UI\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="UI\bootstrap\css\bootstrap-theme.min.css.map" />
+    <Content Include="UI\bootstrap\css\bootstrap.css.map" />
+    <Content Include="UI\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="UI\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="UI\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="UI\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="UI\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Sitio\Plantillas\plantilla_pscaa_despacho.xlsx" />
+    <Content Include="Sitio\Plantillas\plantilla_pscaa_recepcion.xlsx" />
+    <Content Include="Sitio\Plantillas\plantilla_tacl_despacho.xlsx" />
+    <Content Include="Sitio\Plantillas\plantilla_tacl_recepcion.xlsx" />
+    <Content Include="UI\highcharts\code\highcharts-3d.js.map" />
+    <Content Include="UI\highcharts\code\highcharts-more.js.map" />
+    <Content Include="UI\highcharts\code\highcharts.js.map" />
+    <Content Include="UI\highcharts\code\highmaps.js.map" />
+    <Content Include="UI\highcharts\code\highstock.js.map" />
+    <Content Include="UI\highcharts\code\js\highcharts-3d.js.map" />
+    <Content Include="UI\highcharts\code\js\highcharts-more.js.map" />
+    <Content Include="UI\highcharts\code\js\highcharts.js.map" />
+    <Content Include="UI\highcharts\code\js\highmaps.js.map" />
+    <Content Include="UI\highcharts\code\js\highstock.js.map" />
+    <Content Include="UI\highcharts\code\js\modules\accessibility.js.map" />
+    <Content Include="UI\highcharts\code\js\modules\annotations.js.map" />
+    <Content Include="UI\highcharts\code\js\modules\boost-canvas.js.map" />
+    <Content Include="UI\highcharts\code\js\modules\boost.js.map" />
+    <Content Include="UI\highcharts\code\js\modules\broken-axis.js.map" />
+    <Content Include="UI\highcharts\code\js\modules\canvasrenderer.experimental.js.map" />
+    <Content Include="UI\highcharts\code\js\modules\data.js.map" />
+    <Content Include="UI\highcharts\code\js\modules\drilldown.js.map" />
+    <Content Include="UI\highcharts\code\js\modules\export-data.js.map" />
+    <Content Include="UI\highcharts\code\js\modules\exporting.js.map" />
+    <Content Include="UI\highcharts\code\js\modules\funnel.js.map" />
+    <Content Include="UI\highcharts\code\js\modules\gantt.js.map" />
+    <Content Include="UI\highcharts\code\js\modules\grid-axis.js.map" />
+    <Content Include="UI\highcharts\code\js\modules\heatmap.js.map" />
+    <Content Include="UI\highcharts\code\js\modules\map-parser.js.map" />
+    <Content Include="UI\highcharts\code\js\modules\map.js.map" />
+    <Content Include="UI\highcharts\code\js\modules\no-data-to-display.js.map" />
+    <Content Include="UI\highcharts\code\js\modules\offline-exporting.js.map" />
+    <Content Include="UI\highcharts\code\js\modules\overlapping-datalabels.js.map" />
+    <Content Include="UI\highcharts\code\js\modules\series-label.js.map" />
+    <Content Include="UI\highcharts\code\js\modules\solid-gauge.js.map" />
+    <Content Include="UI\highcharts\code\js\modules\static-scale.js.map" />
+    <Content Include="UI\highcharts\code\js\modules\stock.js.map" />
+    <Content Include="UI\highcharts\code\js\modules\treemap.js.map" />
+    <Content Include="UI\highcharts\code\js\modules\xrange-series.js.map" />
+    <Content Include="UI\highcharts\code\modules\accessibility.js.map" />
+    <Content Include="UI\highcharts\code\modules\annotations.js.map" />
+    <Content Include="UI\highcharts\code\modules\boost-canvas.js.map" />
+    <Content Include="UI\highcharts\code\modules\boost.js.map" />
+    <Content Include="UI\highcharts\code\modules\broken-axis.js.map" />
+    <Content Include="UI\highcharts\code\modules\canvasrenderer.experimental.js.map" />
+    <Content Include="UI\highcharts\code\modules\data.js.map" />
+    <Content Include="UI\highcharts\code\modules\drilldown.js.map" />
+    <Content Include="UI\highcharts\code\modules\export-data.js.map" />
+    <Content Include="UI\highcharts\code\modules\exporting.js.map" />
+    <Content Include="UI\highcharts\code\modules\funnel.js.map" />
+    <Content Include="UI\highcharts\code\modules\gantt.js.map" />
+    <Content Include="UI\highcharts\code\modules\grid-axis.js.map" />
+    <Content Include="UI\highcharts\code\modules\heatmap.js.map" />
+    <Content Include="UI\highcharts\code\modules\map-parser.js.map" />
+    <Content Include="UI\highcharts\code\modules\map.js.map" />
+    <Content Include="UI\highcharts\code\modules\no-data-to-display.js.map" />
+    <Content Include="UI\highcharts\code\modules\offline-exporting.js.map" />
+    <Content Include="UI\highcharts\code\modules\overlapping-datalabels.js.map" />
+    <Content Include="UI\highcharts\code\modules\series-label.js.map" />
+    <Content Include="UI\highcharts\code\modules\solid-gauge.js.map" />
+    <Content Include="UI\highcharts\code\modules\static-scale.js.map" />
+    <Content Include="UI\highcharts\code\modules\stock.js.map" />
+    <Content Include="UI\highcharts\code\modules\treemap.js.map" />
+    <Content Include="UI\highcharts\code\modules\xrange-series.js.map" />
+    <Content Include="Sitio\Plantillas\plantilla_eessgnv_despacho.xlsx" />
+    <Content Include="Sitio\Plantillas\plantilla_eessliq_despacho.xlsx" />
+    <Content Include="Sitio\Plantillas\plantilla_eessliq_recepcion.xlsx" />
+    <Content Include="Sitio\Plantillas\plantilla_ptoVentaliq_despacho.xlsx" />
+    <Content Include="Sitio\Plantillas\plantilla_ptoVentaliq_recepcion.xlsx" />
+    <Content Include="Sitio\Plantillas\plantilla_recaudo_suic.xlsx" />
+    <Content Include="UI\css\DevGlp\ASPxCardView.skin" />
+    <Content Include="UI\css\DevGlp\ASPxGridLookup.skin" />
+    <Content Include="UI\css\DevGlp\ASPxGridView.skin" />
+    <Content Include="UI\css\DevGlp\ASPxPivotGrid.skin" />
+    <Content Include="UI\css\DevGlp\ASPxTreeList.skin" />
+    <Content Include="UI\css\DevGlp\Parameters.config" />
+    <Content Include="Sitio\Plantillas\plantilla_glp_despacho.xlsx" />
+    <Content Include="Sitio\Plantillas\plantilla_glp_recepcion.xlsx" />
+    <Content Include="Sitio\Plantillas\plantilla_importacion_transporte.xlsx" />
+    <Content Include="UI\css\Fonts\Battlefield.eot" />
+    <Content Include="UI\css\Fonts\Battlefield.ttf" />
+    <Content Include="UI\css\Fonts\Battlefield.woff" />
+    <Content Include="UI\css\Fonts\Battlefield.woff2" />
+    <Content Include="UI\css\Fonts\icons-regular.eot" />
+    <Content Include="UI\css\Fonts\icons-regular.ttf" />
+    <Content Include="UI\css\Fonts\icons-regular.woff" />
+    <Content Include="UI\css\Fonts\icons-regular.woff2" />
+    <Content Include="UI\fonts\Battlefield.eot" />
+    <Content Include="UI\fonts\Battlefield.ttf" />
+    <Content Include="UI\fonts\Battlefield.woff" />
+    <Content Include="UI\fonts\Battlefield.woff2" />
+    <Content Include="UI\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="UI\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="UI\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="UI\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="UI\fonts\icons-regular.eot" />
+    <Content Include="UI\fonts\icons-regular.ttf" />
+    <Content Include="UI\fonts\icons-regular.woff" />
+    <Content Include="UI\fonts\icons-regular.woff2" />
+    <Content Include="Sitio\Plantillas\plantilla_erg_venta.xlsx" />
+    <Content Include="Sitio\Plantillas\plantilla_pref_recepcion.xlsx" />
+    <Content Include="Sitio\Plantillas\plantilla_txd.xlsx" />
+    <Content Include="Sitio\Plantillas\plantilla_ingAzucarero_despacho.xlsx" />
+    <Content Include="Sitio\Plantillas\Plantilla_ingAzucarero_produccion.xlsx" />
+    <Content Include="Sitio\Manuales\ANH-03641-DGRCR-0014-2024.pdf" />
+    <Content Include="Sitio\Manuales\Instructivo.pdf" />
+    <Content Include="Sitio\Manuales\Instructivo14032025.pdf" />
+    <Content Include="Sitio\Manuales\recordatorio.pdf" />
+    <Content Include="Sitio\Plantillas\plantilla_Graco_despacho.xlsx" />
+    <Content Include="Sitio\Plantillas\plantilla_Graco_recepcion.xlsx" />
+    <None Include="UI\js\jquery-1.10.2-vsdoc.js" />
+    <Content Include="UI\js\jquery-1.10.2.js" />
+    <Content Include="UI\js\jquery-1.10.2.min.js" />
+    <Content Include="UI\js\jquery-1.11.2.min.js" />
+    <Content Include="UI\js\jquery-1.11.js" />
+    <Content Include="UI\js\jquery-1.9.1.min.js" />
+    <Content Include="UI\js\jquery-ui-1.10.3.custom.min.js" />
+    <Content Include="UI\js\jquery.dataTables.min.js" />
+    <Content Include="UI\js\jquery.dataTables.tableTools.min.js" />
+    <Content Include="UI\js\jquery.fancybox.pack.2.1.5.js" />
+    <Content Include="UI\js\jquery.fancybox.pack.js" />
+    <Content Include="UI\js\jquery.maskedinput.min.js" />
+    <Content Include="UI\js\jquery.msgBox.js" />
+    <Content Include="UI\js\pdfobject.js" />
+    <Content Include="UI\js\script.js" />
+    <Content Include="UI\js\SlickGrid\lib\firebugx.js" />
+    <Content Include="UI\js\SlickGrid\lib\jquery-1.7.min.js" />
+    <Content Include="UI\js\SlickGrid\lib\jquery-ui-1.8.16.custom.min.js" />
+    <Content Include="UI\js\SlickGrid\lib\jquery.event.drag-2.2.js" />
+    <Content Include="UI\js\SlickGrid\lib\jquery.event.drop-2.2.js" />
+    <Content Include="UI\js\SlickGrid\lib\jquery.jsonp-2.4.min.js" />
+    <Content Include="UI\js\SlickGrid\lib\jquery.simulate.js" />
+    <Content Include="UI\js\SlickGrid\lib\jquery.sparkline.min.js" />
+    <Content Include="UI\js\SlickGrid\lib\qunit.css" />
+    <Content Include="UI\js\SlickGrid\lib\qunit.js" />
+    <Content Include="UI\js\SlickGrid\plugins\slick.autotooltips.js" />
+    <Content Include="UI\js\SlickGrid\plugins\slick.cellcopymanager.js" />
+    <Content Include="UI\js\SlickGrid\plugins\slick.cellexternalcopymanager.js" />
+    <Content Include="UI\js\SlickGrid\plugins\slick.cellexternalcopymanager.todo.txt" />
+    <Content Include="UI\js\SlickGrid\plugins\slick.cellrangedecorator.js" />
+    <Content Include="UI\js\SlickGrid\plugins\slick.cellrangeselector.js" />
+    <Content Include="UI\js\SlickGrid\plugins\slick.cellselectionmodel.js" />
+    <Content Include="UI\js\SlickGrid\plugins\slick.checkboxselectcolumn.js" />
+    <Content Include="UI\js\SlickGrid\plugins\slick.headerbuttons.css" />
+    <Content Include="UI\js\SlickGrid\plugins\slick.headerbuttons.js" />
+    <Content Include="UI\js\SlickGrid\plugins\slick.headermenu.css" />
+    <Content Include="UI\js\SlickGrid\plugins\slick.headermenu.js" />
+    <Content Include="UI\js\SlickGrid\plugins\slick.rowmovemanager.js" />
+    <Content Include="UI\js\SlickGrid\plugins\slick.rowselectionmodel.js" />
+    <Content Include="UI\js\SlickGrid\slick.core.js" />
+    <Content Include="UI\js\SlickGrid\slick.dataview.js" />
+    <Content Include="UI\js\SlickGrid\slick.editors.js" />
+    <Content Include="UI\js\SlickGrid\slick.formatters.js" />
+    <Content Include="UI\js\SlickGrid\slick.grid.js" />
+    <Content Include="UI\js\SlickGrid\slick.groupitemmetadataprovider.js" />
+    <Content Include="UI\js\SlickGrid\slick.remotemodel.js" />
+    <Content Include="UI\js\Volumenes\calidad.presentacion.js" />
+    <Content Include="UI\js\Volumenes\calidad.validacion.js" />
+    <Content Include="UI\js\Volumenes\GestionVolumenes\saldoMovimientoAlmacenaje.js" />
+    <Content Include="UI\js\Volumenes\GestionVolumenes\volumenesDRUIN.js" />
+    <Content Include="UI\js\Volumenes\GestionVolumenes\volumenesGLP.js" />
+    <Content Include="UI\js\Volumenes\jquery.treeview.js" />
+    <Content Include="UI\js\Volumenes\usuarios.js" />
+    <Content Include="UI\img\icono_eliminar_registro.png" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="UI\js\SlickGrid\plugins\slick.cellexternalcopymanager.js.suggestion" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clases\Controles\CAnexoA.cs" />
+    <Compile Include="Clases\Controles\CAnexoB1.cs" />
+    <Compile Include="Clases\Controles\CAnexoB2.cs" />
+    <Compile Include="Clases\Controles\CAnexoB3.cs" />
+    <Compile Include="Clases\Controles\CAnexoC.cs" />
+    <Compile Include="Clases\Controles\CAnexoD.cs" />
+    <Compile Include="Clases\Controles\CAnexoE.cs" />
+    <Compile Include="Clases\Controles\CAnexoF.cs" />
+    <Compile Include="Clases\Controles\CAnexoG.cs" />
+    <Compile Include="Clases\Controles\CAnexoH.cs" />
+    <Compile Include="Clases\Controles\CAnexoI.cs" />
+    <Compile Include="Clases\Controles\CCostosImportados.cs" />
+    <Compile Include="Clases\Controles\CCostoSubvencion.cs" />
+    <Compile Include="Clases\Controles\CCostoSubvencionFinal.cs" />
+    <Compile Include="Clases\Controles\CCostoTotalFosil.cs" />
+    <Compile Include="Clases\Controles\CCostoUnitarioSubvencion.cs" />
+    <Compile Include="Clases\Controles\CMonitoreoProde.cs" />
+    <Compile Include="Clases\Controles\CMovimientoRedesGas.cs" />
+    <Compile Include="Clases\Controles\CMovimientoRefineria.cs" />
+    <Compile Include="Clases\Controles\CMovimientoTransporteDucto.cs" />
+    <Compile Include="Clases\Controles\CRegistroProdeMasivo.cs" />
+    <Compile Include="Clases\Controles\CRegistrosImportadores.cs" />
+    <Compile Include="Clases\Controles\CVolumenImportado.cs" />
+    <Compile Include="Clases\Util\CTrazaInf.cs" />
+    <Compile Include="Clases\Util\CUtil.cs" />
+    <Compile Include="Controles\CtrDashbOctVol.ascx.cs">
+      <DependentUpon>CtrDashbOctVol.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrDashbOctVol.ascx.designer.cs">
+      <DependentUpon>CtrDashbOctVol.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrFichaTecnicaPrincipal.ascx.cs">
+      <DependentUpon>CtrFichaTecnicaPrincipal.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrFichaTecnicaPrincipal.ascx.designer.cs">
+      <DependentUpon>CtrFichaTecnicaPrincipal.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrFlujoOperadorGlp.ascx.cs">
+      <DependentUpon>CtrFlujoOperadorGlp.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrFlujoOperadorGlp.ascx.designer.cs">
+      <DependentUpon>CtrFlujoOperadorGlp.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrGestionUsuario.ascx.cs">
+      <DependentUpon>CtrGestionUsuario.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrGestionUsuario.ascx.designer.cs">
+      <DependentUpon>CtrGestionUsuario.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrDjConsolidacion.ascx.cs">
+      <DependentUpon>CtrDjConsolidacion.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrDjConsolidacion.ascx.designer.cs">
+      <DependentUpon>CtrDjConsolidacion.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrImportacionDatosPDE.ascx.cs">
+      <DependentUpon>CtrImportacionDatosPDE.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrImportacionDatosPDE.ascx.designer.cs">
+      <DependentUpon>CtrImportacionDatosPDE.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrImportadores.ascx.cs">
+      <DependentUpon>CtrImportadores.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrImportadores.ascx.designer.cs">
+      <DependentUpon>CtrImportadores.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrImportarVolRef.ascx.cs">
+      <DependentUpon>CtrImportarVolRef.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrImportarVolRef.ascx.designer.cs">
+      <DependentUpon>CtrImportarVolRef.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrMonitoreoProde.ascx.cs">
+      <DependentUpon>CtrMonitoreoProde.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrMonitoreoProde.ascx.designer.cs">
+      <DependentUpon>CtrMonitoreoProde.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrProde.ascx.cs">
+      <DependentUpon>CtrProde.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrProde.ascx.designer.cs">
+      <DependentUpon>CtrProde.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrProgramacionProde.ascx.cs">
+      <DependentUpon>CtrProgramacionProde.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrProgramacionProde.ascx.designer.cs">
+      <DependentUpon>CtrProgramacionProde.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrRegAbastAndroid.ascx.cs">
+      <DependentUpon>CtrRegAbastAndroid.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrRegAbastAndroid.ascx.designer.cs">
+      <DependentUpon>CtrRegAbastAndroid.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrRegAbastecimiento.ascx.cs">
+      <DependentUpon>CtrRegAbastecimiento.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrRegAbastecimiento.ascx.designer.cs">
+      <DependentUpon>CtrRegAbastecimiento.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrRepConsumo.ascx.cs">
+      <DependentUpon>CtrRepConsumo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrRepConsumo.ascx.designer.cs">
+      <DependentUpon>CtrRepConsumo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrRepConsumoUsuarioDirecto.ascx.cs">
+      <DependentUpon>CtrRepConsumoUsuarioDirecto.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrRepConsumoUsuarioDirecto.ascx.designer.cs">
+      <DependentUpon>CtrRepConsumoUsuarioDirecto.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrRepCumplRecepDiaVis.ascx.cs">
+      <DependentUpon>CtrRepCumplRecepDiaVis.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrRepCumplRecepDiaVis.ascx.designer.cs">
+      <DependentUpon>CtrRepCumplRecepDiaVis.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrRepIne.ascx.cs">
+      <DependentUpon>CtrRepIne.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrRepIne.ascx.designer.cs">
+      <DependentUpon>CtrRepIne.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrRepMovimientoDdjj.ascx.cs">
+      <DependentUpon>CtrRepMovimientoDdjj.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrRepMovimientoDdjj.ascx.designer.cs">
+      <DependentUpon>CtrRepMovimientoDdjj.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrRepKardex.ascx.cs">
+      <DependentUpon>CtrRepKardex.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrRepKardex.ascx.designer.cs">
+      <DependentUpon>CtrRepKardex.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrFecheroMes.ascx.cs">
+      <DependentUpon>CtrFecheroMes.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrFecheroMes.ascx.designer.cs">
+      <DependentUpon>CtrFecheroMes.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrComparativoInv.ascx.cs">
+      <DependentUpon>CtrComparativoInv.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrComparativoInv.ascx.designer.cs">
+      <DependentUpon>CtrComparativoInv.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrRepDdjj.ascx.cs">
+      <DependentUpon>CtrRepDdjj.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrRepDdjj.ascx.designer.cs">
+      <DependentUpon>CtrRepDdjj.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrRepMovimientoPAHL.ascx.cs">
+      <DependentUpon>CtrRepMovimientoPAHL.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrRepMovimientoPAHL.ascx.designer.cs">
+      <DependentUpon>CtrRepMovimientoPAHL.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrRepMovSaldo.ascx.cs">
+      <DependentUpon>CtrRepMovSaldo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrRepMovSaldo.ascx.designer.cs">
+      <DependentUpon>CtrRepMovSaldo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrRepRank50.ascx.cs">
+      <DependentUpon>CtrRepRank50.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrRepRank50.ascx.designer.cs">
+      <DependentUpon>CtrRepRank50.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrRepRecExterno.ascx.cs">
+      <DependentUpon>CtrRepRecExterno.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrRepRecExterno.ascx.designer.cs">
+      <DependentUpon>CtrRepRecExterno.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrRepSaldoDia.ascx.cs">
+      <DependentUpon>CtrRepSaldoDia.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrRepSaldoDia.ascx.designer.cs">
+      <DependentUpon>CtrRepSaldoDia.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrRepSuicDdjj.ascx.cs">
+      <DependentUpon>CtrRepSuicDdjj.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrRepSuicDdjj.ascx.designer.cs">
+      <DependentUpon>CtrRepSuicDdjj.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrRepVentasHora.ascx.cs">
+      <DependentUpon>CtrRepVentasHora.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrRepVentasHora.ascx.designer.cs">
+      <DependentUpon>CtrRepVentasHora.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrVisorAeroBsisa.ascx.cs">
+      <DependentUpon>CtrVisorAeroBsisa.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrVisorAeroBsisa.ascx.designer.cs">
+      <DependentUpon>CtrVisorAeroBsisa.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrVisorDgac.ascx.cs">
+      <DependentUpon>CtrVisorDgac.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrVisorDgac.ascx.designer.cs">
+      <DependentUpon>CtrVisorDgac.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrVisorAasana.ascx.cs">
+      <DependentUpon>CtrVisorAasana.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrVisorAasana.ascx.designer.cs">
+      <DependentUpon>CtrVisorAasana.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrRepVisorGral.ascx.cs">
+      <DependentUpon>CtrRepVisorGral.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrRepVisorGral.ascx.designer.cs">
+      <DependentUpon>CtrRepVisorGral.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrIntegridad.ascx.cs">
+      <DependentUpon>CtrIntegridad.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrIntegridad.ascx.designer.cs">
+      <DependentUpon>CtrIntegridad.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrLogErrores.ascx.cs">
+      <DependentUpon>CtrLogErrores.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrLogErrores.ascx.designer.cs">
+      <DependentUpon>CtrLogErrores.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrPersonaSegip.ascx.cs">
+      <DependentUpon>CtrPersonaSegip.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrPersonaSegip.ascx.designer.cs">
+      <DependentUpon>CtrPersonaSegip.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrRepDosifGral.ascx.cs">
+      <DependentUpon>CtrRepDosifGral.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrRepDosifGral.ascx.designer.cs">
+      <DependentUpon>CtrRepDosifGral.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrRepDosificacion.ascx.cs">
+      <DependentUpon>CtrRepDosificacion.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrRepDosificacion.ascx.designer.cs">
+      <DependentUpon>CtrRepDosificacion.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrRepMovimientoGral.ascx.cs">
+      <DependentUpon>CtrRepMovimientoGral.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrRepMovimientoGral.ascx.designer.cs">
+      <DependentUpon>CtrRepMovimientoGral.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrRecepciones.ascx.cs">
+      <DependentUpon>CtrRecepciones.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrRecepciones.ascx.designer.cs">
+      <DependentUpon>CtrRecepciones.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrVisorAeronave.ascx.cs">
+      <DependentUpon>CtrVisorAeronave.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrVisorAeronave.ascx.designer.cs">
+      <DependentUpon>CtrVisorAeronave.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrVisorPahl.ascx.cs">
+      <DependentUpon>CtrVisorPahl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrVisorPahl.ascx.designer.cs">
+      <DependentUpon>CtrVisorPahl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Enumeradores\EnumTipoMedicion.cs" />
+    <Compile Include="Lib\CConsultasParametricas.cs" />
+    <Compile Include="Sitio\AeroBsisa\WFImportarVolRef.aspx.cs">
+      <DependentUpon>WFImportarVolRef.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\AeroBsisa\WFImportarVolRef.aspx.designer.cs">
+      <DependentUpon>WFImportarVolRef.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\AeroBsisa\WFVisorAeroBsisa.aspx.cs">
+      <DependentUpon>WFVisorAeroBsisa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\AeroBsisa\WFVisorAeroBsisa.aspx.designer.cs">
+      <DependentUpon>WFVisorAeroBsisa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\AeroBsisa\WFVisorDgac.aspx.cs">
+      <DependentUpon>WFVisorDgac.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\AeroBsisa\WFVisorDgac.aspx.designer.cs">
+      <DependentUpon>WFVisorDgac.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\AeroBsisa\WFVisorAasana.aspx.cs">
+      <DependentUpon>WFVisorAasana.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\AeroBsisa\WFVisorAasana.aspx.designer.cs">
+      <DependentUpon>WFVisorAasana.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\AeroBsisa\WFVisorAeronave.aspx.cs">
+      <DependentUpon>WFVisorAeronave.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\AeroBsisa\WFVisorAeronave.aspx.designer.cs">
+      <DependentUpon>WFVisorAeronave.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\ANH.Master.cs">
+      <DependentUpon>ANH.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\ANH.Master.designer.cs">
+      <DependentUpon>ANH.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Clases\Controles\CRegistroIntimacion.cs" />
+    <Compile Include="Clases\Controles\CReporteCumplimMes.cs" />
+    <Compile Include="Clases\Controles\CReporteCumplimientoMes.cs" />
+    <Compile Include="Clases\Controles\CDjAcumulado.cs" />
+    <Compile Include="Clases\Controles\CMovAcumuladoRep.cs" />
+    <Compile Include="Clases\Controles\CRegistroDocumento.cs" />
+    <Compile Include="Clases\Controles\CRegistroMiddleware.cs" />
+    <Compile Include="Clases\Controles\CDjListaReporte.cs" />
+    <Compile Include="Clases\Controles\CRegistrosImportados.cs" />
+    <Compile Include="Clases\Controles\CTipoOperacion.cs" />
+    <Compile Include="Clases\Controles\CMovimientoAcumuladoDj.cs" />
+    <Compile Include="Clases\Controles\CMovimientoAcumulado.cs" />
+    <Compile Include="Clases\Controles\CRegistrosError.cs" />
+    <Compile Include="Clases\Controles\CRegistros.cs" />
+    <Compile Include="Clases\Controles\CArbol.cs" />
+    <Compile Include="Clases\Controles\CDespachos.cs" />
+    <Compile Include="Clases\Controles\CEntidadDetalle.cs" />
+    <Compile Include="Clases\Controles\CEstacion.cs" />
+    <Compile Include="Clases\Controles\CMovimientos.cs" />
+    <Compile Include="Clases\Controles\COperadores.cs" />
+    <Compile Include="Clases\Controles\CEntidades.cs" />
+    <Compile Include="Clases\Empadronamiento\CHydroConsultas.cs" />
+    <Compile Include="Clases\Parametricas\CParametricas.cs" />
+    <Compile Include="Clases\Persona\CPersonaSesion.cs" />
+    <Compile Include="Controles\CtrAnhDatosPersona.ascx.cs">
+      <DependentUpon>CtrAnhDatosPersona.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrAnhDatosPersona.ascx.designer.cs">
+      <DependentUpon>CtrAnhDatosPersona.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrFlujoOperadorOrig.ascx.cs">
+      <DependentUpon>CtrFlujoOperadorOrig.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrFlujoOperadorOrig.ascx.designer.cs">
+      <DependentUpon>CtrFlujoOperadorOrig.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrManual.ascx.cs">
+      <DependentUpon>CtrManual.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrManual.ascx.designer.cs">
+      <DependentUpon>CtrManual.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrRepCumplimientoMesVis.ascx.cs">
+      <DependentUpon>CtrRepCumplimientoMesVis.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrRepCumplimientoMesVis.ascx.designer.cs">
+      <DependentUpon>CtrRepCumplimientoMesVis.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrRepGrafico.ascx.cs">
+      <DependentUpon>CtrRepGrafico.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrRepGrafico.ascx.designer.cs">
+      <DependentUpon>CtrRepGrafico.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrRepCumplimientoDia.ascx.cs">
+      <DependentUpon>CtrRepCumplimientoDia.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrRepCumplimientoDia.ascx.designer.cs">
+      <DependentUpon>CtrRepCumplimientoDia.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrTipoOperacion.ascx.cs">
+      <DependentUpon>CtrTipoOperacion.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrTipoOperacion.ascx.designer.cs">
+      <DependentUpon>CtrTipoOperacion.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrCondicionUso.ascx.cs">
+      <DependentUpon>CtrCondicionUso.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrCondicionUso.ascx.designer.cs">
+      <DependentUpon>CtrCondicionUso.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrDatoPersona.ascx.cs">
+      <DependentUpon>CtrDatoPersona.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrDatoPersona.ascx.designer.cs">
+      <DependentUpon>CtrDatoPersona.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrPrincipal.ascx.cs">
+      <DependentUpon>CtrPrincipal.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrPrincipal.ascx.designer.cs">
+      <DependentUpon>CtrPrincipal.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrRepCumplimientoMes.ascx.cs">
+      <DependentUpon>CtrRepCumplimientoMes.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrRepCumplimientoMes.ascx.designer.cs">
+      <DependentUpon>CtrRepCumplimientoMes.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrDjMonitoreo.ascx.cs">
+      <DependentUpon>CtrDjMonitoreo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrDjMonitoreo.ascx.designer.cs">
+      <DependentUpon>CtrDjMonitoreo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrDeclaracionJurada.ascx.cs">
+      <DependentUpon>CtrDeclaracionJurada.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrDeclaracionJurada.ascx.designer.cs">
+      <DependentUpon>CtrDeclaracionJurada.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrFlujoOperador.ascx.cs">
+      <DependentUpon>CtrFlujoOperador.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrFlujoOperador.ascx.designer.cs">
+      <DependentUpon>CtrFlujoOperador.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\CtrImportacionDatos.ascx.cs">
+      <DependentUpon>CtrImportacionDatos.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\CtrImportacionDatos.ascx.designer.cs">
+      <DependentUpon>CtrImportacionDatos.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\ELog.cs" />
+    <Compile Include="Entidades\EResultado.cs" />
+    <Compile Include="Entidades\ModeloOctanoMovimiento.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloOctanoMovimiento.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entidades\RequestDTO.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RequestDTO.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Enumeradores\EnumOctanoParametros.cs" />
+    <Compile Include="Enumeradores\EnumUnidadTemperatura.cs" />
+    <Compile Include="Enumeradores\EnumTipoFactura.cs" />
+    <Compile Include="Enumeradores\EnumTipoDocumento.cs" />
+    <Compile Include="Enumeradores\EnumEstadoMov.cs" />
+    <Compile Include="Enumeradores\EnumTipoMoneda.cs" />
+    <Compile Include="Enumeradores\EnumTipoReporte.cs" />
+    <Compile Include="Enumeradores\EnumPais.cs" />
+    <Compile Include="Enumeradores\EnumTipoEmisor.cs" />
+    <Compile Include="Enumeradores\EnumTipoCredFiscal.cs" />
+    <Compile Include="Enumeradores\EnumTipoOperaciones.cs" />
+    <Compile Include="Enumeradores\EnumColumnasGrilla.cs" />
+    <Compile Include="Enumeradores\EnumActividades.cs" />
+    <Compile Include="Enumeradores\EnumContextoUsuario.cs" />
+    <Compile Include="Enumeradores\EnumProductos.cs" />
+    <Compile Include="Enumeradores\EnumDepartamento.cs" />
+    <Compile Include="Enumeradores\EnumOperacionVirtual.cs" />
+    <Compile Include="Enumeradores\EnumTipoParametrica.cs" />
+    <Compile Include="Enumeradores\EnumTipoPersonaHydro.cs" />
+    <Compile Include="Enumeradores\EnumTipoRegistro.cs" />
+    <Compile Include="Enumeradores\EnumTipoMovimiento.cs" />
+    <Compile Include="Enumeradores\EnumTipoMovimientoFlujo.cs" />
+    <Compile Include="Enumeradores\EnumTipoMedioTrasporte.cs" />
+    <Compile Include="Enumeradores\EnumTipoTrasaccionPadre.cs" />
+    <Compile Include="Enumeradores\EnumTipoTransaccion.cs" />
+    <Compile Include="Enumeradores\EnumTiposPago.cs" />
+    <Compile Include="Enumeradores\EnumTiposMensajeAlerta.cs" />
+    <Compile Include="Lib\CLogs.cs" />
+    <Compile Include="Lib\CMessageBoxManager.cs" />
+    <Compile Include="Lib\MessageBoxManager.cs" />
+    <Compile Include="Parametros\CAppSettings.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CAppSettings.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Parametros\CLog.cs" />
+    <Compile Include="Parametros\CParametrosHydro.cs" />
+    <Compile Include="Parametros\CVariablesSesion.cs" />
+    <Compile Include="Parametros\VolumenesCalidad\cParametrosHydro.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFDashbOctVol.aspx.cs">
+      <DependentUpon>WFDashbOctVol.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFDashbOctVol.aspx.designer.cs">
+      <DependentUpon>WFDashbOctVol.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFDjConsolidacion.aspx.cs">
+      <DependentUpon>WFDjConsolidacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFDjConsolidacion.aspx.designer.cs">
+      <DependentUpon>WFDjConsolidacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFFlujoOperadorGlp.aspx.cs">
+      <DependentUpon>WFFlujoOperadorGlp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFFlujoOperadorGlp.aspx.designer.cs">
+      <DependentUpon>WFFlujoOperadorGlp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFProgramacionProde.aspx.cs">
+      <DependentUpon>WFProgramacionProde.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFProgramacionProde.aspx.designer.cs">
+      <DependentUpon>WFProgramacionProde.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFRendimientosVolumetricos.aspx.cs">
+      <DependentUpon>WFRendimientosVolumetricos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFRendimientosVolumetricos.aspx.designer.cs">
+      <DependentUpon>WFRendimientosVolumetricos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFImcidentes.aspx.cs">
+      <DependentUpon>WFImcidentes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFImcidentes.aspx.designer.cs">
+      <DependentUpon>WFImcidentes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFImportadores.aspx.cs">
+      <DependentUpon>WFImportadores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFImportadores.aspx.designer.cs">
+      <DependentUpon>WFImportadores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFMonitoreoProde.aspx.cs">
+      <DependentUpon>WFMonitoreoProde.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFMonitoreoProde.aspx.designer.cs">
+      <DependentUpon>WFMonitoreoProde.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFProde.aspx.cs">
+      <DependentUpon>WFProde.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFProde.aspx.designer.cs">
+      <DependentUpon>WFProde.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFRepConsumo.aspx.cs">
+      <DependentUpon>WFRepConsumo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFRepConsumo.aspx.designer.cs">
+      <DependentUpon>WFRepConsumo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFRepConsumoUsuarioDirecto.aspx.cs">
+      <DependentUpon>WFRepConsumoUsuarioDirecto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFRepConsumoUsuarioDirecto.aspx.designer.cs">
+      <DependentUpon>WFRepConsumoUsuarioDirecto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFRepCumplRecepDiaVis.aspx.cs">
+      <DependentUpon>WFRepCumplRecepDiaVis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFRepCumplRecepDiaVis.aspx.designer.cs">
+      <DependentUpon>WFRepCumplRecepDiaVis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFRepIne.aspx.cs">
+      <DependentUpon>WFRepIne.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFRepIne.aspx.designer.cs">
+      <DependentUpon>WFRepIne.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFRepMovimientoDdjj.aspx.cs">
+      <DependentUpon>WFRepMovimientoDdjj.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFRepMovimientoDdjj.aspx.designer.cs">
+      <DependentUpon>WFRepMovimientoDdjj.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFRepKardex.aspx.cs">
+      <DependentUpon>WFRepKardex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFRepKardex.aspx.designer.cs">
+      <DependentUpon>WFRepKardex.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFComparativoInv.aspx.cs">
+      <DependentUpon>WFComparativoInv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFComparativoInv.aspx.designer.cs">
+      <DependentUpon>WFComparativoInv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFRepDdjj.aspx.cs">
+      <DependentUpon>WFRepDdjj.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFRepDdjj.aspx.designer.cs">
+      <DependentUpon>WFRepDdjj.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFRepMovimientoSaldo.aspx.cs">
+      <DependentUpon>WFRepMovimientoSaldo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFRepMovimientoSaldo.aspx.designer.cs">
+      <DependentUpon>WFRepMovimientoSaldo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFRepMovImpEntidad.aspx.cs">
+      <DependentUpon>WFRepMovImpEntidad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFRepMovImpEntidad.aspx.designer.cs">
+      <DependentUpon>WFRepMovImpEntidad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFRepMovImpInsumos.aspx.cs">
+      <DependentUpon>WFRepMovImpInsumos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFRepMovImpInsumos.aspx.designer.cs">
+      <DependentUpon>WFRepMovImpInsumos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFRepMovSaldo.aspx.cs">
+      <DependentUpon>WFRepMovSaldo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFRepMovSaldo.aspx.designer.cs">
+      <DependentUpon>WFRepMovSaldo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFRepRank50.aspx.cs">
+      <DependentUpon>WFRepRank50.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFRepRank50.aspx.designer.cs">
+      <DependentUpon>WFRepRank50.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFRepRecExterno.aspx.cs">
+      <DependentUpon>WFRepRecExterno.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFRepRecExterno.aspx.designer.cs">
+      <DependentUpon>WFRepRecExterno.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFRepSaldoDia.aspx.cs">
+      <DependentUpon>WFRepSaldoDia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFRepSaldoDia.aspx.designer.cs">
+      <DependentUpon>WFRepSaldoDia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFRepSuicDdjj.aspx.cs">
+      <DependentUpon>WFRepSuicDdjj.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFRepSuicDdjj.aspx.designer.cs">
+      <DependentUpon>WFRepSuicDdjj.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFRepVentaHora.aspx.cs">
+      <DependentUpon>WFRepVentaHora.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFRepVentaHora.aspx.designer.cs">
+      <DependentUpon>WFRepVentaHora.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFRepVisorGral.aspx.cs">
+      <DependentUpon>WFRepVisorGral.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFRepVisorGral.aspx.designer.cs">
+      <DependentUpon>WFRepVisorGral.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFIntegridad.aspx.cs">
+      <DependentUpon>WFIntegridad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFIntegridad.aspx.designer.cs">
+      <DependentUpon>WFIntegridad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFLogErrores.aspx.cs">
+      <DependentUpon>WFLogErrores.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFLogErrores.aspx.designer.cs">
+      <DependentUpon>WFLogErrores.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFRepDosifGral.aspx.cs">
+      <DependentUpon>WFRepDosifGral.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFRepDosifGral.aspx.designer.cs">
+      <DependentUpon>WFRepDosifGral.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFRepDosificacion.aspx.cs">
+      <DependentUpon>WFRepDosificacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFRepDosificacion.aspx.designer.cs">
+      <DependentUpon>WFRepDosificacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFManual.aspx.cs">
+      <DependentUpon>WFManual.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFManual.aspx.designer.cs">
+      <DependentUpon>WFManual.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFRepCumplimientoMesVis.aspx.cs">
+      <DependentUpon>WFRepCumplimientoMesVis.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFRepCumplimientoMesVis.aspx.designer.cs">
+      <DependentUpon>WFRepCumplimientoMesVis.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFRepGrafico.aspx.cs">
+      <DependentUpon>WFRepGrafico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFRepGrafico.aspx.designer.cs">
+      <DependentUpon>WFRepGrafico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFRepCumplimientoDia.aspx.cs">
+      <DependentUpon>WFRepCumplimientoDia.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFRepCumplimientoDia.aspx.designer.cs">
+      <DependentUpon>WFRepCumplimientoDia.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFRepMovimientoGral.aspx.cs">
+      <DependentUpon>WFRepMovimientoGral.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFRepMovimientoGral.aspx.designer.cs">
+      <DependentUpon>WFRepMovimientoGral.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFRecepciones.aspx.cs">
+      <DependentUpon>WFRecepciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFRecepciones.aspx.designer.cs">
+      <DependentUpon>WFRecepciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFDescargaRendimVolumetrico.aspx.cs">
+      <DependentUpon>WFDescargaRendimVolumetrico.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFDescargaRendimVolumetrico.aspx.designer.cs">
+      <DependentUpon>WFDescargaRendimVolumetrico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFTipoOperacion.aspx.cs">
+      <DependentUpon>WFTipoOperacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFTipoOperacion.aspx.designer.cs">
+      <DependentUpon>WFTipoOperacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFDjMonitoreo.aspx.cs">
+      <DependentUpon>WFDjMonitoreo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFDjMonitoreo.aspx.designer.cs">
+      <DependentUpon>WFDjMonitoreo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFDeclaracionJurada.aspx.cs">
+      <DependentUpon>WFDeclaracionJurada.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFDeclaracionJurada.aspx.designer.cs">
+      <DependentUpon>WFDeclaracionJurada.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFCondicionUso.aspx.cs">
+      <DependentUpon>WFCondicionUso.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFCondicionUso.aspx.designer.cs">
+      <DependentUpon>WFCondicionUso.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFPrincipal.aspx.cs">
+      <DependentUpon>WFPrincipal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFPrincipal.aspx.designer.cs">
+      <DependentUpon>WFPrincipal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFDescarga.aspx.cs">
+      <DependentUpon>WFDescarga.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFDescarga.aspx.designer.cs">
+      <DependentUpon>WFDescarga.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFReporte.aspx.cs">
+      <DependentUpon>WFReporte.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFReporte.aspx.designer.cs">
+      <DependentUpon>WFReporte.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFRepCumplimientoMes.aspx.cs">
+      <DependentUpon>WFRepCumplimientoMes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFRepCumplimientoMes.aspx.designer.cs">
+      <DependentUpon>WFRepCumplimientoMes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFImportacionDatos.aspx.cs">
+      <DependentUpon>WFImportacionDatos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFImportacionDatos.aspx.designer.cs">
+      <DependentUpon>WFImportacionDatos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\PAHL\WFRepMovimientoPAHL.aspx.cs">
+      <DependentUpon>WFRepMovimientoPAHL.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\PAHL\WFRepMovimientoPAHL.aspx.designer.cs">
+      <DependentUpon>WFRepMovimientoPAHL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\PAHL\WFVisorPahl.aspx.cs">
+      <DependentUpon>WFVisorPahl.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\PAHL\WFVisorPahl.aspx.designer.cs">
+      <DependentUpon>WFVisorPahl.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Persona\wfAutenticacion.aspx.cs">
+      <DependentUpon>wfAutenticacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Persona\wfAutenticacion.aspx.designer.cs">
+      <DependentUpon>wfAutenticacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Persona\wfSalir.aspx.cs">
+      <DependentUpon>wfSalir.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Persona\wfSalir.aspx.designer.cs">
+      <DependentUpon>wfSalir.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\ReportesCons\repKardex.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sitio\ReportesCons\repInventarioFisDoc.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sitio\ReportesCons\repConsumoMtr.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sitio\ReportesCons\repRank50.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sitio\ReportesCons\repRecepciones.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sitio\ReportesCons\repDosificacion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sitio\ReportesCons\repHistorialTarjeta.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sitio\ReportesExt\repRegistroVolRef.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sitio\Reportes\repAmpliacion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sitio\Reportes\repDjAcumuladoInfra.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sitio\Reportes\repDjCertificadoImportacion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sitio\Reportes\repDjCertificadoImportacion.Designer.cs">
+      <DependentUpon>repDjCertificadoImportacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Reportes\repDjConsolidacion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sitio\Reportes\repDjAcumuladoEgreso.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sitio\Reportes\repFichaTecnicaPrincipal.aspx.cs">
+      <DependentUpon>repFichaTecnicaPrincipal.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Reportes\repFichaTecnicaPrincipal.aspx.designer.cs">
+      <DependentUpon>repFichaTecnicaPrincipal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Reportes\repRendimientoVolumetricoOroNegro.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sitio\Reportes\repRendimientoVolumetricoGEldeBell.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sitio\Reportes\repRendimientoVolumetricoGualvertoV.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sitio\Reportes\repDjContenedor.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sitio\Reportes\repDjImportadores.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sitio\Reportes\repDjImportadores.designer.cs">
+      <DependentUpon>repDjImportadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Reportes\repDjImportadoresFosil.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sitio\Reportes\repDjImportadoresFosil.Designer.cs">
+      <DependentUpon>repDjImportadoresFosil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Reportes\repDjRecaudoExterno.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sitio\Reportes\repIntimacion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sitio\Reportes\repConstanciaEnvio.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sitio\Reportes\repDjAcumulado.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sitio\Reportes\repDjInternacional.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sitio\ReportesCons\repCumplimientoMes.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sitio\Reportes\repNotaDespachoAviacion.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Sitio\Reportes\repNotaDespachoAviacion.Designer.cs">
+      <DependentUpon>repNotaDespachoAviacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFFlujoOperador.aspx.cs">
+      <DependentUpon>WFFlujoOperador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Movimientos\WFFlujoOperador.aspx.designer.cs">
+      <DependentUpon>WFFlujoOperador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Usuarios\wfAdministrarUsuario.aspx.cs">
+      <DependentUpon>wfAdministrarUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Usuarios\wfAdministrarUsuario.aspx.designer.cs">
+      <DependentUpon>wfAdministrarUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitio\Usuarios\WFGestionUsuario.aspx.cs">
+      <DependentUpon>WFGestionUsuario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitio\Usuarios\WFGestionUsuario.aspx.designer.cs">
+      <DependentUpon>WFGestionUsuario.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UI\Docs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Sitio\ReportesCons\repKardex.resx">
+      <DependentUpon>repKardex.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sitio\ReportesCons\repInventarioFisDoc.resx">
+      <DependentUpon>repInventarioFisDoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sitio\ReportesCons\repConsumoMtr.resx">
+      <DependentUpon>repConsumoMtr.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sitio\ReportesCons\repRank50.resx">
+      <DependentUpon>repRank50.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sitio\ReportesCons\repRecepciones.resx">
+      <DependentUpon>repRecepciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sitio\ReportesCons\repDosificacion.resx">
+      <DependentUpon>repDosificacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sitio\ReportesCons\repHistorialTarjeta.resx">
+      <DependentUpon>repHistorialTarjeta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sitio\ReportesExt\repRegistroVolRef.resx">
+      <DependentUpon>repRegistroVolRef.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sitio\Reportes\repAmpliacion.resx">
+      <DependentUpon>repAmpliacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sitio\Reportes\repDjAcumuladoInfra.resx">
+      <DependentUpon>repDjAcumuladoInfra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sitio\Reportes\repDjCertificadoImportacion.resx">
+      <DependentUpon>repDjCertificadoImportacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sitio\Reportes\repDjConsolidacion.resx">
+      <DependentUpon>repDjConsolidacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sitio\Reportes\repDjAcumuladoEgreso.resx">
+      <DependentUpon>repDjAcumuladoEgreso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sitio\Reportes\repRendimientoVolumetricoOroNegro.resx">
+      <DependentUpon>repRendimientoVolumetricoOroNegro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sitio\Reportes\repRendimientoVolumetricoGEldeBell.resx">
+      <DependentUpon>repRendimientoVolumetricoGEldeBell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sitio\Reportes\repRendimientoVolumetricoGualvertoV.resx">
+      <DependentUpon>repRendimientoVolumetricoGualvertoV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sitio\Reportes\repDjContenedor.resx">
+      <DependentUpon>repDjContenedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sitio\Reportes\repDjImportadores.resx">
+      <DependentUpon>repDjImportadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sitio\Reportes\repDjImportadoresFosil.resx">
+      <DependentUpon>repDjImportadoresFosil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sitio\Reportes\repDjRecaudoExterno.resx">
+      <DependentUpon>repDjRecaudoExterno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sitio\Reportes\repIntimacion.resx">
+      <DependentUpon>repIntimacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sitio\Reportes\repConstanciaEnvio.resx">
+      <DependentUpon>repConstanciaEnvio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sitio\Reportes\repDjAcumulado.resx">
+      <DependentUpon>repDjAcumulado.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sitio\Reportes\repDjInternacional.resx">
+      <DependentUpon>repDjInternacional.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sitio\ReportesCons\repCumplimientoMes.resx">
+      <DependentUpon>repCumplimientoMes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sitio\Reportes\repNotaDespachoAviacion.resx">
+      <DependentUpon>repNotaDespachoAviacion.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AnhHydroOctanoAgenteServicio\AnhHydroOctanoAgenteServicio.csproj">
+      <Project>{dc58c1ad-deb4-4a98-b886-f4bb3c4d14a4}</Project>
+      <Name>AnhHydroOctanoAgenteServicio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AnhHydroOctanoPersistencia\AnhHydroOctanoPersistencia.csproj">
+      <Project>{20e213f4-53a4-4975-9177-af4716591321}</Project>
+      <Name>AnhHydroOctanoPersistencia</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1034</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1070/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

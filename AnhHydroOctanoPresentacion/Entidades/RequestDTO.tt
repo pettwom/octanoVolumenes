@@ -1,0 +1,116 @@
+﻿<#@ template language="C#" debug="false" hostspecific="true"#>
+<#@ include file="EF.Utility.CS.ttinclude"#>
+<#@ assembly name="System.Configuration" #>
+<#@ assembly name="System.Core" #>
+<#@ import namespace="System.Xml" #>
+<#@ import namespace="System.Xml.Schema" #>
+<#@ import namespace="System.Configuration" #>
+<#@ import namespace="System.Linq" #>
+<#@ output extension=".cs"#>
+<#
+var code = new CodeGenerationTools(this);
+var configurationFileMap = new ExeConfigurationFileMap();
+configurationFileMap.ExeConfigFilename = this.Host.ResolvePath("../Web.config"); 
+var configuration = ConfigurationManager.OpenMappedExeConfiguration(configurationFileMap, ConfigurationUserLevel.None);
+var xsdCant = Convert.ToInt32(configuration.AppSettings.Settings["svc_xsd_namespaces"].Value);#>
+using System;
+using ServiceStack.ServiceHost; 
+using System.Collections.Generic;
+
+<#
+BeginNamespace(code);
+for(int j=1; j <= xsdCant; j++){
+	XmlTextReader reader = new XmlTextReader (configuration.AppSettings.Settings["servicio_octVolumen"].Value+"/metadata?xsd="+j);
+	XmlSchema myschema = XmlSchema.Read(reader, ValidationCallback);
+
+	for (int i = 0; i < myschema.Items.Count; i++)
+	{
+		var item = myschema.Items[i];
+		if (item.GetType().Equals(typeof(XmlSchemaComplexType)))
+		{
+			var element = (XmlSchemaComplexType)item;
+			string clase = element.Name.Substring(element.Name.LastIndexOf(".")+1);
+			if(clase.StartsWith("ArrayOf") ){ continue;}
+#>
+[Serializable]
+public class <#=clase#> : IReturn<EResultado>
+{
+<#
+			var subitems = (XmlSchemaSequence)element.Particle;
+			foreach (var attr in subitems.Items)
+			{
+				var elem = (XmlSchemaElement) attr;
+				XmlQualifiedName tipo = elem.SchemaTypeName;
+				var strTipo = tipo.Name;
+				if(strTipo == "base64Binary"){
+					strTipo = "byte[]";
+				} else if(strTipo == "ArrayOfstring" ){
+					strTipo = "string[]";
+				} else if(strTipo == "dateTime" ){
+					strTipo = "DateTime";
+                } else if(strTipo.StartsWith("ArrayOf")){
+					strTipo = "List<"+strTipo.Substring(7)+">";
+                } else if(strTipo == "anyType" ){
+					strTipo = "object";
+                }
+#>
+	public <#=strTipo#> <#=elem.Name#> { get; set; }
+<#
+			}
+#>
+} 
+
+<#
+		}
+	}
+}
+#>
+
+
+public class O_USUARIO_CTY 
+{
+	public decimal ESTADO { get; set; }
+    public decimal ID_ENTIDAD { get; set; }
+	public decimal ID_USUARIO { get; set; }
+    public string NOMBRE_COMPLETO { get; set; }
+	public string PERFIL { get; set; }
+	public decimal PERFIL_ID { get; set; }
+}
+<#
+EndNamespace(code);
+#>
+<#+
+public void BeginNamespace(CodeGenerationTools code)
+{
+    var codeNamespace = code.VsNamespaceSuggestion();
+    if (!String.IsNullOrEmpty(codeNamespace))
+    {
+#>
+namespace <#=code.EscapeNamespace(codeNamespace)#>
+{
+<#+
+        PushIndent("    ");
+    }
+}
+
+public void EndNamespace(CodeGenerationTools code)
+{
+    if (!String.IsNullOrEmpty(code.VsNamespaceSuggestion()))
+    {
+        PopIndent();
+#>
+}
+<#+
+    }
+}
+
+public void ValidationCallback(object sender, ValidationEventArgs args)
+{
+	if (args.Severity == XmlSeverityType.Warning)
+		Console.Write("WARNING: ");
+	else if (args.Severity == XmlSeverityType.Error)
+		Console.Write("ERROR: ");
+
+	Console.WriteLine(args.Message);
+}
+#>

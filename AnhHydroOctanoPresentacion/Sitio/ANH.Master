@@ -1,0 +1,433 @@
+﻿<%@ Master Language="C#" AutoEventWireup="True" CodeBehind="ANH.master.cs" Inherits="AnhHydroOctanoPresentacion.ANH" %>
+
+<%@ Register TagPrefix="dx" Namespace="DevExpress.Web" Assembly="DevExpress.Web.v15.1, Version=15.1.9.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>HYDRO - OCTANO VOLUMENES</title>
+
+    <script src="../../UI/js/jquery-1.11.2.min.js"></script>
+    <script src="../../UI/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="../../UI/highcharts/code/highcharts.js"></script>
+    <script src="../../UI/highcharts/code/modules/exporting.js"></script>
+
+    <link href="../UI/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../UI/css/HydroNuevo.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../UI/css/sidebar.css" />
+    <link rel="stylesheet" href="../UI/css/sisgen.css" />
+    <link rel="shortcut icon" href="/UI/img/Volumenes/octano128.ico" type="image/x-icon" />
+
+    <link href="../UI/css/DevGlp/PivotGrid/sprite.css" rel="stylesheet" />
+    <link href="../UI/css/DevGlp/PivotGrid/styles.css" rel="stylesheet" />
+    <link href="../UI/css/DevGlp/GridView/sprite.css" rel="stylesheet" />
+    <link href="../UI/css/DevGlp/GridView/styles.css" rel="stylesheet" />
+    <link href="../UI/css/DevGlp/TreeList/sprite.css" rel="stylesheet" />
+    <link href="../UI/css/DevGlp/TreeList/styles.css" rel="stylesheet" />
+    <link href="../UI/css/DevGlp/Web/sprite.css" rel="stylesheet" />
+    <link href="../UI/css/DevGlp/Web/styles.css" rel="stylesheet" />
+    <script src="../../UI/js/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="../../UI/js/script.js"></script>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/css/alertify.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/AlertifyJS/1.13.1/alertify.min.js" type="text/javascript"></script>
+
+   <style type="text/css">
+    #bellBadge {
+        background: #ff0000 !important;
+        animation: badgePulse 0.5s ease-in-out;
+    }
+    
+    @keyframes badgePulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.2); }
+        100% { transform: scale(1); }
+    }
+    
+    #bellSvg {
+        transition: fill 0.3s, opacity 0.3s;
+    }
+    
+    #bellSvg:hover {
+        opacity: 1 !important;
+        fill: #ffb450 !important;
+    }
+</style>
+  <script type="text/javascript">
+      // Función para abrir notificaciones
+      window.anhAbrirNotificaciones = function () {
+          // Verificar si el popup está disponible
+          if (typeof pucNotificaciones !== 'undefined' && pucNotificaciones) {
+              pucNotificaciones.Show();
+              if (typeof pnlNotificaciones !== 'undefined' && pnlNotificaciones) {
+                  pnlNotificaciones.PerformCallback('0|0');
+              }
+              return false;
+          }
+
+          // Usar confirm nativo
+          var respuesta = confirm('Las notificaciones están disponibles en la página principal.\n\n¿Desea ir a la página principal para revisar sus notificaciones?');
+          if (respuesta) {
+              // Redirigir con parámetro sw=1
+              window.location.href = 'WFPrincipal.aspx?sw=1';
+          }
+          return false;
+      };
+
+      // Función para actualizar badge
+      window.actualizarBadgeNotificaciones = function (cantidad) {
+          var badge = document.getElementById('bellBadge');
+          var bellSvg = document.getElementById('bellSvg');
+
+          if (badge) {
+              if (cantidad > 0) {
+                  badge.style.display = 'inline-block';
+                  badge.innerHTML = cantidad > 99 ? '99+' : cantidad;
+                  if (bellSvg) {
+                      bellSvg.style.fill = '#ff6400';
+                      bellSvg.style.opacity = '1';
+                  }
+              } else {
+                  badge.style.display = 'none';
+                  if (bellSvg) {
+                      bellSvg.style.fill = 'currentColor';
+                      bellSvg.style.opacity = '0.6';
+                  }
+              }
+          }
+      };
+
+      // Función para marcar todas
+      window.anhMarcarTodas = function () {
+          if (typeof pnlNotificaciones !== 'undefined' && pnlNotificaciones) {
+              pnlNotificaciones.PerformCallback('MARCAR_TODAS');
+          } else {
+              var respuesta = confirm('Las notificaciones están disponibles en la página principal.\n\n¿Desea ir a la página principal para revisar sus notificaciones?');
+              if (respuesta) {
+                  window.location.href = 'WFPrincipal.aspx?sw=1';
+              }
+          }
+          return false;
+      };
+
+      // Función para verificar parámetro al cargar la página
+      function verificarParametroNotificaciones() {
+          var urlParams = new URLSearchParams(window.location.search);
+          var sw = urlParams.get('sw');
+
+          if (sw === '1') {
+              // Eliminar el parámetro de la URL sin recargar la página
+              var newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname;
+              window.history.replaceState({}, document.title, newUrl);
+
+              // Abrir notificaciones después de que la página cargue completamente
+              setTimeout(function () {
+                  if (typeof pucNotificaciones !== 'undefined' && pucNotificaciones) {
+                      pucNotificaciones.Show();
+                      if (typeof pnlNotificaciones !== 'undefined' && pnlNotificaciones) {
+                          pnlNotificaciones.PerformCallback('0|0');
+                      }
+                  }
+              }, 500);
+          }
+      }
+
+      // Ejecutar cuando la página cargue
+      if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', verificarParametroNotificaciones);
+      } else {
+          verificarParametroNotificaciones();
+      }
+</script>
+    <script type="text/javascript">
+        eval(function (p, a, c, k, e, r) { e = function (c) { return c.toString(a) }; if (!''.replace(/^/, String)) { while (c--) r[e(c)] = k[c] || e(c); k = [function (e) { return r[e] }]; e = function () { return '\\w+' }; c = 1 }; while (c--) if (k[c]) p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c]); return p }('9 k(a){p.j.i.o().n(e);8(a===l){3.2("4").1.0="7";3.2("6").1.0="7";c d}f{8(m(g)==\'9\'){8(g(a)==h){3.2("4").1.0="7";3.2("6").1.0="7";c d}f{3.2("4").1.0="5";3.2("6").1.0="5";c h}}}}9 e(a,b){3.2("4").1.0="5";3.2("6").1.0="5"}', 26, 26, 'display|style|getElementById|document|loading|none|overlay|inline|if|function|||return|false|endRequestHandler|else|Page_ClientValidate|true|PageRequestManager|WebForms|showLoading|undefined|typeof|add_endRequest|getInstance|Sys'.split('|'), 0, {}));
+        function pageLoad(sender, args) {
+            var tooltip = $("#tooltip");
+            $(".showtooltip").click(
+                function (e) {
+                    var sender = $(this);
+                    tooltip.html("<span style='cursor: pointer;display: block;margin-top: -15px;color: #E97306;float: right;font-weight: bold;'>x</span>" + sender.attr("alt"));
+                    tooltip.css("left", e.pageX - 60);
+                    tooltip.css("top", e.pageY - 50);
+                } /*,
+                function (e) {
+                    tooltip.css("left", -9000);
+                    tooltip.css("top", 0);
+                }*/
+            );
+            $(".tooltip").click(function () {
+                tooltip.css("left", -9000);
+                tooltip.css("top", 0);
+            });
+            try {
+                afterLoad(sender, args);
+            } catch (e) { }
+        };
+    </script>
+    <script type="text/javascript">
+        window.history.forward(1);
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            var trigger = $('.hamburger'),
+                overlay = $('.overlay'),
+                isClosed = false;
+
+            trigger.click(function () {
+                hamburger_cross();
+            });
+
+            function hamburger_cross() {
+
+                if (isClosed == true) {
+                    overlay.hide();
+                    trigger.removeClass('is-open');
+                    trigger.addClass('is-closed');
+                    isClosed = false;
+                } else {
+                    overlay.show();
+                    trigger.removeClass('is-closed');
+                    trigger.addClass('is-open');
+                    isClosed = true;
+                }
+            }
+
+            $('[data-toggle="offcanvas"]').click(function () {
+                $('#wrapper').toggleClass('toggled');
+            });
+        });
+    </script>
+
+    <script>      
+        function MensajeAdvertencia(a) {
+            console.log(a);
+
+            alertify.alert("<b style='color:#8b585f; font-size: 10pt;'>ATENCION. ALERTA DE INTEGRIDAD DE INFORMACION</b>",
+
+                "<b style='color:#8b585f; font-size: 10pt;' >" + a + "</b>"
+                //, function () { alertify.success('Ok') }
+                //, function () { alertify.error('Cancel') }
+                );
+            
+            //alertify.confirm('Copia de factura', '&#191;Desea imprimir una factura original o copia?',
+            //function () {
+            //  alertify.success('Original clicked!')
+            //},
+            //function () { alertify.error('Copia clicked!') }).set('labels', { ok: 'Original', cancel: 'Copia' });
+        }
+
+        function MensajeInformacion(a) {
+            console.log('notificacion:' + a);
+            alertify.log("<b>" + a + ".</b>");
+            return false;
+        }
+
+        function MensajeExito(a) {
+            console.log('ok:' + a);
+            alertify.success("<b>" + a + ".</b>");
+            return false;
+        }
+
+        function MensajeError(a) {
+            console.log('error:' + a);
+            alertify.error("<b>" + a + "</b>");
+            return false;
+        }
+    </script>
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server" style="margin-left: 0px">
+        <div id="wrapper">
+            <div class="overlay"></div>
+            <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+                <ul class="nav sidebar-nav">
+                    <li class="sidebar-brand">
+                        <%--<img src="/OctanoVolumenes/UI/img/Volumenes/logoOctanoVolumenes3.png" /><span class="glyphicon glyphicon-th-list"></span>--%>
+                    </li>
+                    
+                    <li class="glyphicon glyphicon-new-window" id="menuHydro" runat="server">
+                        <ul class="" runat="server">
+                            <li><a href="#">ANH</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">ANH</a></li>
+                        </ul>
+
+                    </li>
+                </ul>
+            </nav>
+            <div id="page-content-wrapper">
+                <header class="navbar navbar-inverse navbar-fixed-top">
+                    <div id="menu col-lg-3 col-md-4 col-sm-6 col-xs-1">
+                        <button type="button" class="hamburger is-closed" data-toggle="offcanvas">
+                            <span class="hamb-top"></span>
+                            <span class="hamb-middle"></span>
+                            <span class="hamb-bottom"></span>
+                        </button>
+                        <div version="2.0" id="header">
+                            <div class="pull-right ">
+                                <div class="pull-left" id="oculta">
+                                    <ul class="nav navbar-nav navbar-right">
+                                        <li class="dropdown" id="liCampana">
+                                    <a href="#" onclick="anhAbrirNotificaciones(); return false;" class="dropdown-toggle">
+                                        <svg id="bellSvg"
+                                             viewBox="0 0 24 24" fill="currentColor"
+                                             style="width:18px;height:18px;vertical-align:middle;
+                                                    opacity:.6;transition:fill .3s,opacity .3s;">
+                                            <path d="M12 2a1 1 0 0 0-1 1v.5C8.1 4.2 6 6.8 6 10v5
+                                                     l-1.7 1.7A1 1 0 0 0 5 18h14a1 1 0 0 0
+                                                     .7-1.7L18 15v-5c0-3.2-2.1-5.8-5-6.5V3
+                                                     a1 1 0 0 0-1-1zm0 20a2 2 0 0 0 2-2h-4
+                                                     a2 2 0 0 0 2 2z"/>
+                                        </svg>
+                                        <span id="bellBadge"
+                                              style="display:none;background:#ffb450;color:#fff;
+                                                     font-size:9px;font-weight:bold;min-width:16px;
+                                                     height:16px;border-radius:8px;line-height:16px;
+                                                     text-align:center;padding:0 3px;
+                                                     vertical-align:middle;margin-left:2px;">
+                                        </span>
+                                    </a>              
+                                    <ul class="dropdown-menu" style="min-width:320px;">
+                                        <li>
+                                            <div style="background:#2d7a2d;color:#fff;padding:8px 12px;
+                                                        font-weight:bold;font-size:13px;
+                                                        display:flex;justify-content:space-between;
+                                                        align-items:center;border-radius:4px 4px 0 0;">
+                                                <span>Notificaciones</span>
+                                                <small style="font-size:11px;opacity:.85;cursor:pointer;
+                                                               font-weight:normal;"
+                                                       onclick="anhMarcarTodas();return false;">
+                                                    Marcar todas leídas
+                                                </small>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div id="notifItems" style="padding:10px;">
+                                                <div style="text-align:center; color:#999; padding:15px;">
+                                                    Haz clic en la campana para ver todas las notificaciones
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="divider navbar-login-session-bg"></li>
+                                        <li>
+                                            <div style="padding:8px 12px;text-align:center;">
+                                                <a href="#" onclick="anhAbrirNotificaciones(); return false;"
+                                                   style="color:#2d7a2d;font-weight:bold;font-size:12px;">
+                                                    Ver todas las notificaciones
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </li>
+                                        <li class="dropdown pull-right">
+                                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                                <span class="glyphicon glyphicon-user"></span>
+                                                <strong>Usuario:
+                                                    <asp:Label runat="server" ID="lblUsuario" CssClass="label"></asp:Label></strong>
+                                                <span class="glyphicon glyphicon-chevron-down"></span>
+                                            </a>
+                                            <ul class="dropdown-menu">
+                                                <li>
+                                                    <div class="navbar-login">
+                                                        <div class="row">
+                                                            <div class="col-lg-4">
+                                                                <p class="text-center">
+                                                                    <asp:Image ID="imgImagenPerfil" runat="server" ImageUrl="../UI/img/silueta.jpg" ImageAlign="Middle" CssClass="icon-size img-circle" Width="70px" />                                                                   
+                                                                </p>
+                                                            </div>
+                                                            <div class="col-lg-8">
+                                                                <p class="text-left">
+                                                                    <strong>
+                                                                        <asp:Label ID="lblUnidad" runat="server" Text=""></asp:Label></strong>
+
+                                                                </p>
+                                                                <p class="text-left small">
+                                                                    <asp:Label ID="lblCorreoInstitucional" runat="server" Text=""></asp:Label>
+                                                                </p>
+                                                                <p class="text-left">
+                                                                    <asp:Button ID="btnPerfiles" runat="server" Text="Perfil" CssClass="btn btn-success btn-block btn-sm" />
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="divider navbar-login-session-bg"></li>
+                                                <%--                                                <li><a href="#">Account Settings <span class="glyphicon glyphicon-cog pull-right"></span></a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="#">User stats <span class="glyphicon glyphicon-stats pull-right"></span></a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="#">Messages <span class="badge pull-right">42 </span></a></li>
+                                                <li class="divider"></li>
+                                                <li><a href="#">Favourites Snippets <span class="glyphicon glyphicon-heart pull-right"></span></a></li>
+                                                <li class="divider"></li>--%>
+                                                <li><a href="#">
+                                                    <asp:HyperLink runat="server" ID="lnkSalir" NavigateUrl="~/Sitio/Persona/wfSalir.aspx" onClick="if (! confirm('¿Desea salir de la aplicación?')) { return false; }" CssClass="glyphicon glyphicon-log-out">
+                                                    Salir&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="glyphicon glyphicon-log-out"></span></asp:HyperLink>
+                                                </a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navbar-header ">
+                            <div class="navbar-header pull-left">
+                                <div class="pull-left">
+                                    <a title="Home" name="Home" href="">
+                                        <a class="navbar-brand" style="padding-top: 0px;" href="#">
+                                            <img src="../../UI/img/Volumenes/logoOctanoVolumenes4.png" />
+                                        </a>
+                                    </a>
+                                </div>
+                                <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+                                    <span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                                </button>
+                            </div>
+                            <div class="navbar-collapse collapse col-xs-12">
+                                <asp:Menu ID="menu1"
+                                    runat="server"
+                                    Orientation="Horizontal"
+                                    RenderingMode="List"
+                                    IncludeStyleBlock="false"
+                                    StaticMenuStyle-CssClass="nav navbar-nav "
+                                    DynamicMenuStyle-CssClass="dropdown-menu ">
+                                </asp:Menu>
+                            </div>
+                        </div>
+
+                    </div>
+                </header>
+                <div class="wrapper style5">
+                    <div class="container ">
+                        <div class="center-block ">
+                            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <dx:ASPxLoadingPanel ID="LoadingPanel" runat="server" ClientInstanceName="LoadingPanel"
+                Modal="True">
+            </dx:ASPxLoadingPanel>
+        </div>
+        <hr />
+        <div class="container">
+            <footer id="footer">
+                <div class="copyright wrapper">
+                    <div class="copyright-text">
+                        <p>
+                            Agencia Nacional de Hidrocarburos | Av. 20 de Octubre Nro. 2685 | NIT: 120919027 | La Paz, Bolivia
+                            Linea Gratuita: 800-10-6006 | Tel: (591)-2-2434000 | Fax: (591)-2-2434007 | Email: contacto @ anh.gob.bo
+                            Desarrollo y mantenimiento: Dirección de Tecnologías de Información y Comunicación
+                              AGENCIA NACIONAL DE HIDROCARBUROS &copy; <%: DateTime.Now.Year %>
+                        </p>
+                    </div>
+                </div>
+            </footer>
+        </div>    
+        </form>
+</body>
+</html>

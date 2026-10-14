@@ -1,0 +1,170 @@
+﻿@charset "UTF-8";
+/* CSS Document */
+
+body {
+	background:url(../../ui/img/hydro2014/Hydro_background.jpg) !important;
+	margin:0; 
+	padding:0; 
+	height:100%;
+}
+
+.responsive_anh_container {
+	width:100%;
+	height:100%;
+	display:inline-table;
+	margin:0; 
+	padding:0;
+	table-layout:fixed;
+}
+
+.responsive_anh_1 {
+	background:url(../../ui/img/hydro2014/Hydro_maqueta_1.png);
+	width:1%;
+	height:190px;
+	background-repeat:no-repeat;
+	background-position:right;
+	display:block;
+	float:left;
+	/*margin-left:1px;*/
+}
+
+.responsive_anh_2 {
+	background:url(../../ui/img/hydro2014/Hydro_maqueta_2.png);
+	width:98%;
+	height:190px;
+	background-repeat:repeat-x;
+	display:block;
+	float:left;
+}
+
+.responsive_anh_3 {
+	background:url(../../ui/img/hydro2014/Hydro_maqueta_3.png);
+	width:1%;
+	height:190px;
+	background-repeat:no-repeat;
+	background-position:left;
+	display:block;
+	float:left;
+}
+
+.responsive_anh_4 {
+	background:url(../../ui/img/hydro2014/Hydro_maqueta_4.png);
+	width:1%;
+	height:100%;
+	background-repeat:repeat-y;
+	background-position:right;
+	display:table-cell;
+}
+
+.responsive_anh_5 {
+	background:url(../../ui/img/hydro2014/Hydro_maqueta_5.png);
+	width:98%;
+	height:100%;
+	max-width:80%;
+	/*overflow:scroll;*/
+	background-repeat:repeat;
+	display:table-cell;
+}
+
+.responsive_anh_6 {
+	background:url(../../ui/img/hydro2014/Hydro_maqueta_6.png);
+	width:1%;
+	height:100%;
+	background-repeat:repeat-y;
+	background-position:left;
+	display:table-cell;
+	/*background-position:-1px 0px;*/
+}
+
+.responsive_anh_7 {
+	background:url(../../ui/img/hydro2014/Hydro_maqueta_7.png);
+	width:1%;
+	height:87px;
+	background-repeat:no-repeat;
+	background-position:right top;
+	display:block;
+	float:left;
+	/*margin-left:1px;*/
+}
+
+.responsive_anh_8 {
+	background:url(../../ui/img/hydro2014/Hydro_maqueta_8.png);
+	width:98%;
+	height:87px;
+	background-repeat:repeat-x;
+	background-position:top;
+	display:block;
+	float:left;
+}
+
+.responsive_anh_9 {
+	background:url(../../ui/img/hydro2014/Hydro_maqueta_9.png);
+	width:1%;
+	height:87px;
+	background-repeat:no-repeat;
+	/*background-pro2014/Hydro_maqueta_9.png);*/
+	width:8%;
+	height:87px;
+	background-repeat:no-repeat;
+	/*background-position:l/Hydro_maqueta_9.png);*/
+	width:1%;
+	height:87px;
+	background-repeat:no-repeat;
+	background-position:left top;
+	display:block;
+	float:left;
+}
+
+.responsive_anh_bloq_left {
+	display:block;
+	float:left;
+	padding-top:30px;
+}
+
+.responsive_anh_bloq_right {
+	display:block;
+	float:right;
+	padding-top:30px;
+}
+
+.responsive_anh_bloq_center {
+	padding-top:17px;
+	text-align:center;
+	width:100%;
+	color:#547b13;
+	font-size:8px;
+}
+
+/*** Default setup ***/
+#s4-workspace{
+    /* background-color of the workspace */
+    background-color: silver;
+	width:100% !important;
+}
+ 
+#s4-bodyContainer{
+	margin:auto;
+    /* defines 960px by using 60rem = 60 * 16px (Default Font Size)
+    width: 60rem;
+    /* background color of the content
+     background-color: white;*/
+}
+ 
+/*** Fix for the dialogs ***/
+.ms-dialog #s4-workspace{
+    background-color: white;
+}
+ 
+.ms-dialog #s4-bodyContainer{
+    margin: 0px;
+    width: auto;
+}
+
+.ms-dlgContent #s4-bodyContainer{
+    width: auto;
+}
+ 
+/*** clear fix ***/
+.clearfix{
+    clear: both;
+}

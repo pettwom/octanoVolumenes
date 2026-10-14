@@ -1,0 +1,842 @@
+﻿@charset "UTF-8";
+/* CSS Document */
+
+/*Fuente ANH*/
+@font-face
+{
+ font-family: 'anh_font_eot';
+ src: url('Fonts/GOTHIC.eot');
+}
+
+@font-face
+{
+ font-family: 'anh_font_otf';
+ src: url('Fonts/GOTHIC.otf');
+}
+
+@font-face
+{
+ font-family: 'anh_font_svg';
+ src: url('Fonts/GOTHIC.svg');
+}
+
+@font-face
+{
+ font-family: 'anh_font_ttf';
+ src: url('Fonts/GOTHIC.ttf');
+}
+
+body
+{
+ font-family: 'anh_font_ttf';
+}
+
+/*Estilo general sitio ANH*/
+.Hydro_Titulo_Verde_Grande {
+	font-family:'Century Gothic', anh_font_otf, anh_font_eot, anh_font_ttf, anh_font_svg; font-size:25px; color:#598024; font-weight:bolder;
+}
+.Hydro_Titulo_Negro_Grande {
+	font-family:'Century Gothic', anh_font_otf, anh_font_eot, anh_font_ttf, anh_font_svg; font-size:25px; color:#000000; font-weight:bolder;
+}
+.Hydro_Titulo_Plomo_Grande {
+	font-family:'Century Gothic', anh_font_otf, anh_font_eot, anh_font_ttf, anh_font_svg; font-size:25px; color:#BBBBBB; font-weight:bolder;
+}
+.Hydro_Titulo_Blanco_Grande {
+	font-family:'Century Gothic', anh_font_otf, anh_font_eot, anh_font_ttf, anh_font_svg; font-size:25px; color:#FFFFFF; font-weight:bolder;
+}
+
+.Hydro_Titulo_Verde_Mediano, .Hydro_Form h1 {
+	font-family:'Century Gothic', anh_font_otf, anh_font_eot, anh_font_ttf, anh_font_svg; font-size:30px; color:#598024; font-weight:bolder;
+}
+.Hydro_Titulo_Negro_Mediano {
+	font-family:'Century Gothic', anh_font_otf, anh_font_eot, anh_font_ttf, anh_font_svg; font-size:20px; color:#000000; font-weight:bolder;
+}
+.Hydro_Titulo_Plomo_Mediano {
+	font-family:'Century Gothic', anh_font_otf, anh_font_eot, anh_font_ttf, anh_font_svg; font-size:20px; color:#BBBBBB; font-weight:bolder;
+}
+.Hydro_Titulo_Blanco_Mediano {
+	font-family:'Century Gothic', anh_font_otf, anh_font_eot, anh_font_ttf, anh_font_svg; font-size:20px; color:#FFFFFF; font-weight:bolder;
+}
+
+.Hydro_Titulo_Verde_Menor, .Hydro_Form fieldset legend {
+	font-family:'Century Gothic', anh_font_otf, anh_font_eot, anh_font_ttf, anh_font_svg; font-size:15px; color:#598024; font-weight:bolder;
+}
+.Hydro_Titulo_Negro_Menor {
+	font-family:'Century Gothic', anh_font_otf, anh_font_eot, anh_font_ttf, anh_font_svg; font-size:15px; color:#000000; font-weight:bolder;
+}
+.Hydro_Titulo_Plomo_Menor {
+	font-family:'Century Gothic', anh_font_otf, anh_font_eot, anh_font_ttf, anh_font_svg; font-size:15px; color:#BBBBBB; font-weight:bolder;
+}
+.Hydro_Titulo_Blanco_Menor {
+	font-family:'Century Gothic', anh_font_otf, anh_font_eot, anh_font_ttf, anh_font_svg; font-size:15px; color:#FFFFFF; font-weight:bolder;
+}
+
+
+.Hydro_Contenido_Verde_Grande {
+	font-family:'Century Gothic', anh_font_otf, anh_font_eot, anh_font_ttf, anh_font_svg; font-size:22px; color:#598024; font-weight:lighter;
+}
+.Hydro_Contenido_Negro_Grande {
+	font-family:'Century Gothic', anh_font_otf, anh_font_eot, anh_font_ttf, anh_font_svg; font-size:22px; color:#000000; font-weight:lighter;
+}
+.Hydro_Contenido_Plomo_Grande {
+	font-family:'Century Gothic', anh_font_otf, anh_font_eot, anh_font_ttf, anh_font_svg; font-size:22px; color:#BBBBBB; font-weight:lighter;
+}
+.Hydro_Contenido_Blanco_Grande {
+	font-family:'Century Gothic', anh_font_otf, anh_font_eot, anh_font_ttf, anh_font_svg; font-size:22px; color:#FFFFFF; font-weight:lighter;
+}
+
+.Hydro_Contenido_Verde_Mediano {
+	font-family:'Century Gothic', anh_font_otf, anh_font_eot, anh_font_ttf, anh_font_svg; font-size:18px; color:#598024; font-weight:lighter;
+}
+.Hydro_Contenido_Negro_Mediano {
+	font-family:'Century Gothic', anh_font_otf, anh_font_eot, anh_font_ttf, anh_font_svg; font-size:18px; color:#000000; font-weight:lighter;
+}
+.Hydro_Contenido_Plomo_Mediano {
+	font-family:'Century Gothic', anh_font_otf, anh_font_eot, anh_font_ttf, anh_font_svg; font-size:18px; color:#BBBBBB; font-weight:lighter;
+}
+.Hydro_Contenido_Blanco_Mediano {
+	font-family:'Century Gothic', anh_font_otf, anh_font_eot, anh_font_ttf, anh_font_svg; font-size:18px; color:#FFFFFF; font-weight:lighter;
+}
+
+.Hydro_Contenido_Verde_Normal, .Hydro_Form label {
+	font-family:'Century Gothic', anh_font_otf, anh_font_eot, anh_font_ttf, anh_font_svg; font-size:12px; color:#598024; font-weight:lighter;
+}
+.Hydro_Contenido_Negro_Normal, .Hydro_Form p label, .Hydro_Form input[type=text] {
+	font-family:'Century Gothic', anh_font_otf, anh_font_eot, anh_font_ttf, anh_font_svg; font-size:12px; color:#000000; font-weight:lighter;
+}
+.Hydro_Contenido_Plomo_Normal {
+	font-family:'Century Gothic', anh_font_otf, anh_font_eot, anh_font_ttf, anh_font_svg; font-size:12px; color:#BBBBBB; font-weight:lighter;
+}
+.Hydro_Contenido_Blanco_Normal {
+	font-family:'Century Gothic', anh_font_otf, anh_font_eot, anh_font_ttf, anh_font_svg; font-size:12px; color:#FFFFFF; font-weight:lighter;
+}
+
+.Hydro_Contenido_Verde_Menor {
+	font-family:'Century Gothic', anh_font_otf, anh_font_eot, anh_font_ttf, anh_font_svg; font-size:8px; color:#598024; font-weight:lighter;
+}
+.Hydro_Contenido_Negro_Menor {
+	font-family:'Century Gothic', anh_font_otf, anh_font_eot, anh_font_ttf, anh_font_svg; font-size:8px; color:#000000; font-weight:lighter;
+}
+.Hydro_Contenido_Plomo_Menor {
+	font-family:'Century Gothic', anh_font_otf, anh_font_eot, anh_font_ttf, anh_font_svg; font-size:8px; color:#BBBBBB; font-weight:lighter;
+}
+.Hydro_Contenido_Blanco_Menor {
+	font-family:'Century Gothic', anh_font_otf, anh_font_eot, anh_font_ttf, anh_font_svg; font-size:8px; color:#FFFFFF; font-weight:lighter;
+}
+
+
+.Hydro_Alerta_Verde {
+	font-family:'Century Gothic', anh_font_otf, anh_font_eot, anh_font_ttf, anh_font_svg; font-size:12px; color:#598024; font-weight:lighter;
+}
+.Hydro_Alerta_Rojo {
+	font-family:'Century Gothic', anh_font_otf, anh_font_eot, anh_font_ttf, anh_font_svg; font-size:12px; color:#C30; font-weight:lighter;
+}
+.Hydro_Alerta_Naranja {
+	font-family:'Century Gothic', anh_font_otf, anh_font_eot, anh_font_ttf, anh_font_svg; font-size:12px; color:#FF6600; font-weight:lighter;
+}
+.Hydro_Alerta_Azul {
+	font-family:'Century Gothic', anh_font_otf, anh_font_eot, anh_font_ttf, anh_font_svg; font-size:12px; color:#0066FF; font-weight:lighter;
+}
+
+.Hydro_Linea_Verde {
+	color:#0E7C13; height: 1px; margin-top:auto;
+}
+.Hydro_Linea_Negro {
+	color:#000000; height: 1px; margin-top:auto;
+}
+.Hydro_Linea_Plomo {
+	color:#BBBBBB; height: 1px; margin-top:auto;
+}
+.Hydro_Linea_Blanco {
+	color:#FFFFFF; height: 1px; margin-top:auto;
+}
+.Hydro_Linea_Rojo {
+	color:#C30; height: 1px; margin-top:auto;
+}
+
+.Hydro_Link_Verde_Mediano a, .Hydro_Link_Verde_Mediano:visited a, .Hydro_Link_Verde_Mediano:active a, .Hydro_Link_Verde_Mediano:link a, .Hydro_Link_Verde_Mediano:hover a {
+	font-family:'Century Gothic', anh_font_otf, anh_font_eot, anh_font_ttf, anh_font_svg; font-size:18px; color:#598024; font-weight:bolder; text-decoration:underline;
+}
+.Hydro_Link_Negro_Mediano a, .Hydro_Link_Negro_Mediano:visited a, .Hydro_Link_Negro_Mediano:active a, .Hydro_Link_Negro_Mediano:link a, .Hydro_Link_Negro_Mediano:hover a {
+	font-family:'Century Gothic', anh_font_otf, anh_font_eot, anh_font_ttf, anh_font_svg; font-size:18px; color:#000000; font-weight:bolder; text-decoration:underline;
+}
+.Hydro_Link_Plomo_Mediano a, .Hydro_Link_Plomo_Mediano:visited a, .Hydro_Link_Plomo_Mediano:active a, .Hydro_Link_Plomo_Mediano:link a, .Hydro_Link_Plomo_Mediano:hover a {
+	font-family:'Century Gothic', anh_font_otf, anh_font_eot, anh_font_ttf, anh_font_svg; font-size:18px; color:#BBBBBB; font-weight:bolder; text-decoration:underline;
+}
+.Hydro_Link_Blanco_Mediano a, .Hydro_Link_Verde_Mediano:visited a, .Hydro_Link_Verde_Mediano:active a, .Hydro_Link_Verde_Mediano:link a, .Hydro_Link_Verde_Mediano:hover a {
+	font-family:'Century Gothic', anh_font_otf, anh_font_eot, anh_font_ttf, anh_font_svg; font-size:18px; color:#FFFFFF; font-weight:bolder; text-decoration:underline;
+}
+.Hydro_Link_Verde_Normal a, .Hydro_Link_Verde_Normal:visited a, .Hydro_Link_Verde_Normal:active a, .Hydro_Link_Verde_Normal:link a, .Hydro_Link_Verde_Normal:hover a {
+	font-family:'Century Gothic', anh_font_otf, anh_font_eot, anh_font_ttf, anh_font_svg; font-size:12px; color:#598024; font-weight:lighter; text-decoration:underline;
+}
+.Hydro_Link_Negro_Normal a, .Hydro_Link_Negro_Normal:visited a, .Hydro_Link_Negro_Normal:active a, .Hydro_Link_Negro_Normal:link a, .Hydro_Link_Negro_Normal:hover a {
+	font-family:'Century Gothic', anh_font_otf, anh_font_eot, anh_font_ttf, anh_font_svg; font-size:12px; color:#000000; font-weight:lighter; text-decoration:underline;
+}
+.Hydro_Link_Plomo_Normal a, .Hydro_Link_Plomo_Normal:visited a, .Hydro_Link_Plomo_Normal:active a, .Hydro_Link_Plomo_Normal:link a, .Hydro_Link_Plomo_Normal:hover a {
+	font-family:'Century Gothic', anh_font_otf, anh_font_eot, anh_font_ttf, anh_font_svg; font-size:12px; color:#BBBBBB; font-weight:lighter; text-decoration:underline;
+}
+.Hydro_Link_Blanco_Normal a, .Hydro_Link_Verde_Normal:visited a, .Hydro_Link_Verde_Normal:active a, .Hydro_Link_Verde_Normal:link a, .Hydro_Link_Verde_Normal:hover a {
+	font-family:'Century Gothic', anh_font_otf, anh_font_eot, anh_font_ttf, anh_font_svg; font-size:12px; color:#FFFFFF; font-weight:lighter; text-decoration:underline;
+}
+.Hydro_Link_Verde_Mediano:hover a, .Hydro_Link_Verde_Mediano:hover a, .Hydro_Link_Verde_Mediano:hover a, .Hydro_Link_Verde_Mediano:hover a, .Hydro_Link_Verde_Normal:hover a, .Hydro_Link_Verde_Normal:hover a, .Hydro_Link_Verde_Normal:hover a, .Hydro_Link_Verde_Normal:hover a {
+	font-weight:bolder; text-decoration:none;
+}
+
+.Hydro_Div_Plomo {
+	background-color:#CCCCCC; margin: 10px 10px 10px 10px; width:100%; padding:  10px 10px 10px 10px; -moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px;
+}
+
+.Hydro_Div_Verde {
+	background-color:#6caf21; margin: 10px 10px 10px 10px; width:100%; padding:  10px 10px 10px 10px; -moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px;
+}
+
+.Hydro_Div_Aviso_Verde {
+	background-color:#c6dcad; margin: 40px 40px 40px 40px; width:100%; padding:  10px 10px 10px 10px; border:#598024 thin solid; text-align:center; -moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px;
+}
+.Hydro_Div_Aviso_Naranja {
+	background-color:#ffefc9; margin: 40px 40px 40px 40px; width:100%; padding:  10px 10px 10px 10px; border:#FF6600 thin solid; text-align:center; -moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px;
+}
+.Hydro_Div_Aviso_Rojo {
+	background-color:#ffd7c9; margin: 40px 40px 40px 40px; width:100%; padding:  10px 10px 10px 10px; border:#C30 thin solid; text-align:center; -moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px;
+}
+.Hydro_Div_Aviso_Azul {
+	background-color:#c9e5ff; margin: 40px 40px 40px 40px; width:100%; padding:  10px 10px 10px 10px; border:#0066FF thin solid; text-align:center; -moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px;
+}
+
+.Hydro_Form fieldset {
+	/*border:#598024 1px solid;*/ 
+    -moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px;
+    border:1px solid #999;
+    border-radius:8px;
+    box-shadow:0 0 10px #999;
+	
+}
+
+.Hydro_Form fieldset legend {
+  /*padding: 10px 10px 10px 10px;*/ 
+  /*border:1px solid green; */
+  color:green; 
+  /*float:right;*/ 
+  -moz-border-radius: 4px; 
+  -webkit-border-radius: 8px; 
+  border-radius: 8px;
+}
+
+.Hydro_Form input[type=text], .Hydro_Form input[type=password], .Hydro_Form input[type=file], .Hydro_Form textarea {
+    border: 1px solid #598024; 
+	-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;
+    -webkit-box-shadow: 
+      inset 0 0 0px rgba(0,0,0,0.0),
+            0 0 4px rgba(89,128,36,0.5); 
+    -moz-box-shadow: 
+      inset 0 0 0px rgba(0,0,0,0.0),
+            0 0 4px rgba(89,128,36,0.5); 
+    box-shadow: 
+      inset 0 0 0px rgba(0,0,0,0.0),
+            0 0 4px rgba(89,128,36,0.5); 
+    padding: 2px;
+    /*background: rgba(240,240,240,0.5);*/
+    /*margin: 0 0 10px 10px;*/
+}
+
+.Hydro_Form input[type=button] { /* clase general */
+  border: 1px solid #dedede;
+  display: inline-block;
+  padding: 8px 11px;
+  text-decoration: none;
+  background: #f5f5f5;
+  border-color: #dedede #d8d8d8 #d3d3d3;
+  box-shadow: 0 1px 1px #eaeaea, inset 0 1px 0 #fbfbfb;
+  color: #555;
+  text-shadow: 0 1px 0 #fff;
+  background: -moz-linear-gradient(top,  #f9f9f9, #f0f0f0);
+  background: -webkit-linear-gradient(top,  #f9f9f9, #f0f0f0);
+  background: o-linear-gradient(top,  #f9f9f9, #f0f0f0);
+  background: ms-linear-gradient(top,  #f9f9f9, #f0f0f0);
+  background: linear-gradient(top,  #f9f9f9, #f0f0f0);
+  -moz-border-radius: 8px; 
+  -webkit-border-radius: 8px; 
+  border-radius: 8px;
+  font-family:'Century Gothic', anh_font_otf, anh_font_eot, anh_font_ttf, anh_font_svg; 
+  font-size:12px; 
+  color:#598024; 
+  filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='#f0f0f0');
+}
+
+.Hydro_Form input:hover[type=button]{
+    background: #f4f4f4;
+    border-color: #c7c7c7 #c3c3c3 #bebebe;
+    box-shadow: 0 1px 1px #ebebeb, inset 0 1px 0 #f3f3f3;
+    text-shadow: 0 1px 0 #fdfdfd;
+    background: -moz-linear-gradient(top,  #efefef, #f8f8f8);
+    background: -webkit-linear-gradient(top,  #efefef, #f8f8f8);
+    background: -o-linear-gradient(top,  #efefef, #f8f8f8);
+    background: -ms-linear-gradient(top,  #efefef, #f8f8f8);
+    background: linear-gradient(top,  #efefef, #f8f8f8);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#efefef', endColorstr='#f8f8f8');
+}
+
+.Hydro_Td_Titulo {
+background-color:#87ae48; margin: 10px 10px 10px 10px; width:100%; padding:  10px 10px 10px 10px; -moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px;
+font-family:'Century Gothic', anh_font_otf, anh_font_eot, anh_font_ttf, anh_font_svg; font-size:15px; color:#ffffff; font-weight:bolder;
+}
+
+.Hydro_Td_Contenido {
+background-color:#f5f5f5; margin: 10px 10px 10px 10px; width:100%; padding:  5px 5px 5px 5px; -moz-border-radius: 8px; -webkit-border-radius: 8px; border-radius: 8px;
+font-family:'Century Gothic', anh_font_otf, anh_font_eot, anh_font_ttf, anh_font_svg; font-size:12px; color:#000000;
+}
+
+
+#menumodulo {
+    margin: 0;
+    /*background: #BBBBBB;*/
+    background: -moz-linear-gradient(top, #ccc 1%, #BBBBBB 50%);
+    /*background: -webkit-linear-gradient(top, #111 1%,#BBBBBB 50%);
+    background: -o-linear-gradient(top, #111 1%,#BBBBBB 50%);*/
+    background: -ms-linear-gradient(top, #ccc 1%,#BBBBBB 50%);
+    background: linear-gradient(top, #ccc 1%,#BBBBBB 50%);
+    background-color: #bcbcbc;
+}
+
+#menumodulo ul {
+  list-style-type: none;
+  width: auto;
+  position: relative;
+  display: block;
+  height: 33px;
+  font-size: 12px;
+  background: #ddd;
+  font-family: 'Century Gothic', anh_font_otf, anh_font_eot, anh_font_ttf, anh_font_svg;
+  /*border: 1px solid #000;*/
+  margin: 0;
+  padding: 0;
+}
+#menumodulo li {
+  display: block;
+  float: left;
+  margin: 0;
+  padding: 0;
+  border-right:solid 1px #EEEEEE;
+  background: #CCCCCC;
+  background: -moz-linear-gradient(top, #CCCCCC 15%, #BBBBBB 100%);
+  background: -webkit-linear-gradient(top, #CCCCCC 15%,#BBBBBB 100%);
+  background: -o-linear-gradient(top, #CCCCCC 15%,#BBBBBB 100%);
+  background: -ms-linear-gradient(top, #CCCCCC 15%,#BBBBBB 100%);
+  background: linear-gradient(top, #CCCCCC 15%,#BBBBBB 100%);
+}
+#menumodulo li a {
+  float: left;
+  color: #598024;
+  text-decoration: none;
+  height: 24px ;
+  padding: 9px 15px 0;
+  font-weight: bold;
+  
+}
+#menumodulo li a:hover,
+#menumodulo .active {
+  color: #fff;
+  text-decoration: none;
+}
+#menumodulo .active a {
+  color: #fff;
+  font-weight: 700;
+}
+#menumodulo ul {
+  background-color: #7AB900;
+}
+#menumodulo li a:hover,
+#menumodulo li.active {
+  background-color: #7AB900;
+}
+
+#cssmenu {
+  border: none;
+  margin: 5px 0px 0px 0px;
+  padding: 0px;
+  font: 67.5% 'Century Gothic', anh_font_otf, anh_font_eot, anh_font_ttf, anh_font_svg;
+  font-size: 14px;
+  font-weight: bold;
+  width: auto;
+  background: #87ae48;
+}
+#cssmenu a, #cssmenu a:hover, #cssmenu a:active
+{
+color: #fff;    
+}
+#cssmenu ul {
+  
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-left: 15px;
+}
+
+#cssmenu li {
+  float: left;
+  padding: 0px;
+    
+}
+#cssmenu li a {
+  background: #87ae48;
+  /*background: -moz-linear-gradient(top, #87ae48 15%, #426711 100%);*/
+  background: -webkit-linear-gradient(top, #87ae48 15%,#426711 100%);
+  background: -o-linear-gradient(top, #87ae48 15%,#426711 100%);
+  background: -ms-linear-gradient(top, #87ae48 15%,#426711 100%);
+  background: linear-gradient(top, #87ae48 15%,#426711 100%);
+  display: block;
+  font-weight: normal;
+  line-height: 35px;
+  margin: 0px;
+  padding: 0px 20px!important;
+  text-align: center;
+  text-decoration: none;
+}
+#cssmenu > ul > li > a {
+  color: #2B1B1B;
+}
+#cssmenu ul ul a {
+  color: #2B1B1B;
+}
+#cssmenu li > a:hover,
+#cssmenu ul li:hover > a {
+  /*background: #FFD95F  url('/UI/img/hover.png') bottom center no-repeat;
+  text-decoration: none;*/
+  color: #000;
+  background: #ffffff;
+  background: -moz-linear-gradient(top, #87ae48 15%, #87ae48 100%);
+  background: -webkit-linear-gradient(top, #87ae48 15%,#87ae48 100%);
+  background: -o-linear-gradient(top, #87ae48 15%,#87ae48 100%);
+  background: -ms-linear-gradient(top, #87ae48 15%,#87ae48 100%);
+  background: linear-gradient(top, #87ae48 15%,#87ae48 100%);
+  text-decoration: none;
+}
+#cssmenu li ul {
+  background:#d6ebb8;
+  background: -moz-linear-gradient(top, #87ae48 15%, #d6ebb8 100%);
+  background: -webkit-linear-gradient(top, #87ae48 15%,#d6ebb8 100%);
+  background: -o-linear-gradient(top, #87ae48 15%,#d6ebb8 100%);
+  background: -ms-linear-gradient(top, #87ae48 15%,#d6ebb8 100%);
+  background: linear-gradient(top, #87ae48 15%,#d6ebb8 100%);
+  display: none;
+  height: auto;
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+  position: absolute;
+  width: 225px;
+  z-index: 200;
+}
+#cssmenu li:hover ul {
+  display: block;
+}
+#cssmenu li li {
+  /*background: url('/UI/img/sub_sep.gif') bottom left repeat-x;*/
+  display: block;
+  float: none;
+  margin: 0px;
+  padding: 0px;
+  width: 225px;
+}
+#cssmenu li:hover li a {
+  background: none;
+}
+#cssmenu li ul a {
+  display: block;
+  height: 35px;
+  font-size: 12px;
+  font-style: normal;
+  margin: 0px;
+  padding: 0px 10px 0px 15px;
+  text-align: left;
+}
+#cssmenu li ul a:hover,
+#cssmenu li ul li:hover > a {
+  /*background: #FFD95F  url('/UI/img/hover_sub.png') center left no-repeat;*/
+  background:#d6ebb8;
+  border: 0px;
+  text-decoration: none;
+  color: #597f24;
+    font-weight: bold;
+}
+#cssmenu p {
+  clear: left;
+}
+
+.Hydro_Form select {
+    border: 1px solid #598024 !important; 
+	-moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;
+    padding: 2px;
+    background: #FFFFFF;
+    margin: 0 0 0px 0px;
+}
+
+.tip{ font-weight: normal;font-style: italic; color: #000;}
+.obligatorio{ color: red; font-weight: bold;font-size: 130%;}
+
+h1, h2, h3, h4, h5, h6
+{
+    /*font-size: 1.4em;*/
+    color: #87ae50;
+    /*font-variant: small-caps;*/
+    text-transform: none;
+    /*font-weight: 200;*/
+    /*margin-bottom: 0px;*/
+    text-shadow: 2px 2px 3px rgba(150, 150, 150, 0.75); 
+
+}
+
+h1
+{
+    font-size: 3.1em;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+}
+
+.Hydro_Form input:hover[type=button], .Hydro_Form input[type=submit], .Hydro_Link_Boton_Verde:hover, lightbox_trigger:hover {
+    background: #598024;
+    border-color: #c7c7c7 #c3c3c3 #bebebe;
+    box-shadow: 0 1px 1px #ebebeb, inset 0 1px 0 #598024;
+    text-shadow: 0 1px 0 #3b9519;
+    background: -moz-linear-gradient(top,  #4b9519, #598024);
+    background: -webkit-linear-gradient(top,  #4b9519, #598024);
+    background: -o-linear-gradient(top,  #4b9519, #598024);
+    background: -ms-linear-gradient(top,  #4b9519, #598024);
+    background: linear-gradient(top,  #4b9519, #598024);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#4b9519', endColorstr='#598024');
+}
+
+.Hydro_Form input[type=button], .Hydro_Form input[type=submit], .Hydro_Link_Boton_Verde, .lightbox_trigger { 
+  border: 1px solid #598024;
+  display: inline-block;
+  padding: 8px 11px;
+  text-decoration: none;
+  background: #87ae48;
+  border-color: #dedede #d8d8d8 #d3d3d3;
+  box-shadow: 0 1px 1px #eaeaea, inset 0 1px 0 #6caf21;
+  color: #555;
+  text-shadow: 0 1px 0 #4b9519;
+  background: -moz-linear-gradient(top,  #6caf21, #87ae48);
+  background: -webkit-linear-gradient(top,  #6caf21, #87ae48);
+  background: o-linear-gradient (top,  #6caf21, #87ae48);
+  background: ms-linear-gradient (top,  #6caf21, #87ae48);
+  background: linear-gradient(top,  #6caf21, #87ae48);
+  -moz-border-radius: 8px; 
+  -webkit-border-radius: 8px; 
+  border-radius: 8px;
+  font-family: 'Century Gothic','anh_font'; 
+  font-size:12px; 
+  color:#fbfbfb; 
+  filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#6caf21', endColorstr='#87ae48');
+}
+
+.Hydro_Logoff {
+    background-image: url(../img/Volumenes/cerrar_sesion14.png);    
+    display: inline-block;
+    color: transparent;
+    height: 14px;
+    width: 103px;
+    margin-left: 7px;
+}
+
+.mensaje_error
+{
+    background-color: #FFF0F0;
+    border: #FF4F4F solid thin;
+    width: 100%;
+    text-align: center;
+    color: #940000;
+    padding: 3px;
+    display: none;
+    border-radius: 5px;
+}
+
+.mensaje
+{
+    background-color: #EBEFF3;
+    border: #92ADF5 solid thin;
+    width: 95%;
+    text-align: center;
+    color: #000A31;
+    padding: 3px;
+    display: none;
+    border-radius: 5px;
+}
+
+.iframeTab {
+    background-color: whiteSmoke;
+    border-top: #CECECE solid thin;
+    border-left: #CECECE solid thin;
+    border-right: #CECECE solid thin;
+    font-weight: normal;
+    padding: 5px;
+    cursor: pointer;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.iframeTab:hover {
+    background-color: #FDFDFD;
+    color: black;
+}
+
+/*sobreescribiendo estilos planilla*/
+.Hydro_Form input[type="text"], .Hydro_Form input[type="password"], .Hydro_Form input[type="file"], .Hydro_Form textarea {
+    margin: 0px;
+}
+.Hydro_Td_Titulo {
+    padding: 5px 10px;
+}
+
+.Hydro_Tr_Seleccionado td {
+    background-color:#87ae48 !important;
+}
+.Hydro_Tr_Error {
+    background-color:#FFD5D5 !important;border:#C30 thin solid !important;
+}
+
+.Hydro_Tr_Error_Alert {
+    background-color:red !important;border:#C30 thin solid !important;color: white;font-weight: bold;
+}
+
+.Hydro_Table {
+    width: 100%;
+}
+
+.Hydro_Table label 
+{
+    z-index: 150;
+    color: #000000;
+    min-width: 44px;
+    cursor:pointer;
+    /*position: relative;   */
+    margin-right: 0px;
+    transition: border-color .20s;
+    
+    border: 1px solid #dedede;
+    display: inline-block;
+    padding: 3px 0px 3px 2px;
+    text-decoration: none;
+    background: #f5f5f5;
+    border-color: #dedede #d8d8d8 #d3d3d3;
+    box-shadow: 0 1px 1px #eaeaea, inset 0 1px 0 #fbfbfb;
+    text-shadow: 0 1px 0 #fff;
+    background: -moz-linear-gradient(top,  #f9f9f9, #f0f0f0);
+    background: -webkit-linear-gradient(top,  #f9f9f9, #f0f0f0);
+    background: o-linear-gradient(top,  #f9f9f9, #f0f0f0);
+    background: ms-linear-gradient(top,  #f9f9f9, #f0f0f0);
+    background: linear-gradient(top,  #f9f9f9, #f0f0f0);
+    -moz-border-radius: 5px; 
+    -webkit-border-radius: 5px; 
+    border-radius: 5px;
+    font-family:verdana,Arial; 
+    font-size:11px;
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='#f0f0f0');
+    #position:inherit;
+}   
+.Hydro_Table label:hover {
+    background: #f4f4f4;
+    border-color: #c7c7c7 #c3c3c3 #bebebe;
+    box-shadow: 0 1px 1px #ebebeb, inset 0 1px 0 #f3f3f3;
+    text-shadow: 0 1px 0 #fdfdfd;
+    background: -moz-linear-gradient(top,  #efefef, #f8f8f8);
+    background: -webkit-linear-gradient(top,  #efefef, #f8f8f8);
+    background: -o-linear-gradient(top,  #efefef, #f8f8f8);
+    background: -ms-linear-gradient(top,  #efefef, #f8f8f8);
+    background: linear-gradient(top,  #efefef, #f8f8f8);
+    filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#efefef', endColorstr='#f8f8f8');
+}
+
+
+
+
+
+
+
+
+
+.Hydro_Table td {
+    font-family:'Century Gothic', anh_font_otf, anh_font_eot, anh_font_ttf, anh_font_svg;
+    font-size:12px; 
+}
+
+.Hydro_Table td input[type=text]
+{
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.Hydro_Form input[type=button], .Hydro_Form input[type=submit], .Hydro_Link_Boton_Blanco, .Hydro_Link_Boton_Verde {
+    font-weight: bold;
+}
+
+.Hydro_Td_Titulo {
+-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;
+}
+
+.Hydro_Td_Contenido, .Hydro_Tr_Contenido td {
+-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;
+padding:  2px 3px;border: 1px solid #f5f5f5;
+}
+
+.Hydro_Form input[type=text], .Hydro_Form input[type=password], .Hydro_Form input[type=file], .Hydro_Form textarea{
+    -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;
+}
+.Hydro_Form input[type=button], .Hydro_Form input[type=submit], .Hydro_Link_Boton_Blanco  
+{
+    cursor: pointer;margin-right: 5px;
+}
+
+.xxxPrueba 
+{
+    background-color: #ffaaaa;
+}
+
+
+.ui-menu-item strong{ color: blue;}
+
+.tituloRegistrado {
+    Color:darkcyan;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.tituloNoRegistrado {
+    Color:red;
+}
+
+
+.alert-box {
+    color:#555;
+    border-radius:10px;
+    font-family:Tahoma,Geneva,Arial,sans-serif;font-size:11px;
+    padding:10px 10px 10px 36px;
+    margin:10px;
+}
+.alert-box span {
+    font-weight:bold;
+    text-transform:uppercase;
+}
+.error {
+    background:#ffecec url('../../UI/img/alertBox/error.png') no-repeat 10px 50%;
+    border:1px solid #f5aca6;
+}
+.success {
+    background:#e9ffd9 url('../../UI/img/alertBox/success.png') no-repeat 10px 50%;
+    border:1px solid #a6ca8a;
+}
+.warning {
+    background:#fff8c4 url('../../UI/img/alertBox/warning.png') no-repeat 10px 50%;
+    border:1px solid #f2c779;
+}
+.notice {
+    background:#e3f7fc url('../../UI/img/alertBox/notice.png') no-repeat 10px 50%;
+    border:1px solid #8ed9f6;
+}
+
+.tooltip 
+{
+    position: absolute;
+    border-radius: 5px 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; 
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1); -webkit-box-shadow: 5px 5px rgba(0, 0, 0, 0.1); -moz-box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+    font-family: Calibri, Tahoma, Geneva, sans-serif;
+    position: absolute; z-index: 99;
+    left: -100px;top: -100px;
+    background: #FFFFAA; border: 1px solid #FFAD33;
+    padding: 5px;
+}
+
+#overlay{ width: 100%; height: 100%; background-color: #FFF; opacity: 0.4;position: fixed;top: 0px;left: 0px;display: none;}
+#loading{ position: fixed;top: 48%;left: 48%; background-repeat: no-repeat;border: none;display: none;}
+
+.radio
+{
+font-size: 20px;
+font-weight: bold;
+color: #009933;
+}
+
+.fancy-green .ajax__tab_header
+{
+background: url('../img/green_bg_Tab.gif') repeat-x;
+cursor:pointer;
+}
+.fancy-green .ajax__tab_hover .ajax__tab_outer, .fancy-green .ajax__tab_active .ajax__tab_outer
+{
+background: url('../img/green_left_Tab.gif') no-repeat left top ;
+}
+.fancy-green .ajax__tab_hover .ajax__tab_inner, .fancy-green .ajax__tab_active .ajax__tab_inner
+{
+background: url('../img/green_right_Tab.gif') no-repeat right top;
+}
+.fancy .ajax__tab_header
+{
+font-size: 13px;
+font-weight: bold;
+color: #000;
+font-family: sans-serif;
+}
+.fancy .ajax__tab_active .ajax__tab_outer, .fancy .ajax__tab_header .ajax__tab_outer, .fancy .ajax__tab_hover .ajax__tab_outer
+{
+height: 46px;
+}
+.fancy .ajax__tab_active .ajax__tab_inner, .fancy .ajax__tab_header .ajax__tab_inner, .fancy .ajax__tab_hover .ajax__tab_inner
+{
+height: 46px;
+margin-left: 16px; /* offset the width of the left image */
+}
+.fancy .ajax__tab_active .ajax__tab_tab, .fancy .ajax__tab_hover .ajax__tab_tab, .fancy .ajax__tab_header .ajax__tab_tab
+{
+margin: 16px 16px 0px 0px;
+}
+.fancy .ajax__tab_hover .ajax__tab_tab, .fancy .ajax__tab_active .ajax__tab_tab
+{
+color: #fff;
+}
+
+/*L.l*/
+.CampoObligatorio {
+    color: #ff0000;
+    font-weight: bold;
+    font-size: 130%;
+}
+.mensaje_error_campo {
+    color: #ff0000;
+}
+.fielset_con { border: 1px solid rgb(89, 128, 36) !important; 
+    margin: 2px 0 0;border-radius: 0 !important;
+}
+.con_table {
+    width: 48%;
+    float: left; 
+}
+.none_margin{ margin: 0 !important;}
+
+.title_pag{ /*background: rgb(102, 153, 102);*/ background: rgb(135, 174, 72) none repeat scroll 0 0;
+    border-radius: 8px 35px 35px 8px; color: #fff; font-size: 11pt; padding: 5px 10px; }
+.borde-img{ border: 1px solid #426711 !important;cursor: pointer;}
+.borde-img:hover{ border: 1px solid rgb(138, 178, 22) !important;box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 5px 0 rgba(0, 0, 0, 0.56);background: #fff;}
+
+.title-tanque{float: right;
+    font-weight: bold;
+    left: -103px;
+    position: relative;
+    top: -15px;}
+
+.link_btn_fotos {
+    color: rgb(89, 128, 36) !important;
+    font-family: "Century Gothic",anh_font_otf,anh_font_eot,anh_font_ttf,anh_font_svg !important;
+    font-size: 14px !important;
+    font-weight: bold !important;
+}
+.link_btn_fotos:hover{ text-decoration: underline !important;color: #f2c779 !important;}
+.linkimg{ color: rgb(122, 159, 14)!important;text-align: center !important;float: left;padding: 5px;}
+.linkimg:hover{ box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); color: rgb(244, 146, 27) !important; text-decoration: underline; background: #f9f9f9}
+.link_RegSol{float: left; text-align: center; width: 100%;}
+
+.icon_ayuda_16 {
+    background: url('../img/Certificados/master.png') -48px 0px;
+    width: 16px;
+    height: 16px;
+}
+
+/*end css*/

@@ -1,0 +1,65 @@
+﻿namespace AnhHydroOctanoPresentacion.Enumeradores
+{
+    public enum EnumColumnasGrilla
+    {
+        FoAbm = 0,
+        FoId = 17,
+        FoFechaMovimiento = 1,
+        FoPlaca = 6,
+        FoPais = 35,
+        FoNoAutorizacion = 10,
+        FoNofactura = 9,
+        FoTipoMovimiento = 3,
+        FoNit = 4,
+        FoRazonSocial = 5,
+        FoTipoTransaccion = 8,
+        FoPrecio = 14,
+        FoImporte = 16,
+        FoOrigenReg = 2,//lmqc
+        FoTipoFlujo = 38,
+        FoPrecioRec = 56,
+        FoImporteRec = 57,
+        FoCantidadRec = 55,
+
+        DjAcSaldoInicial = 5,
+        DjAcTotalIngreso = 26,
+        DjAcTotalSalida = 47,
+        DjAcSaldoFinal = 48,
+        DjAcProducto = 4,
+        DjAcCodProducto= 51,
+        DjAcTipoInfraestructura = 49,
+        DjAcInfraestructura = 50,
+
+        PvAcCodProducto = 0,
+        PvAcProducto = 1,
+        PvAcUnidMedida = 2,
+        PvAcTipoInfraestructura = 3,
+        PvAcInfraestructura = 4,
+        PvAcFecha = 5,
+        PvAcSaldoIni = 6,
+        PvAcTotalIng = 27,
+        PvAcToatlEgr = 48,
+        PvAcSaldoFin = 49,
+
+        VAeExplotador = 3,
+        VAePropietario = 31,
+        VAeEstado = 35,
+
+        FaAccp = 91,
+        FaB1cctf = 92,
+        FaB2cctt = 93,
+        FaB3cctf = 94,
+        FaCcs = 95,
+        FaD1io = 96,
+        FaD2ii = 97,
+        FaD3idf = 98,
+        FaEcc = 99,
+        FaF1pd = 100,
+        FaF2ps = 101,
+        FaG1ai = 102,
+        FaG2adf = 103,
+        FaHcm = 104,
+        FaI1di = 105,
+        FaI2df = 106
+    }
+}

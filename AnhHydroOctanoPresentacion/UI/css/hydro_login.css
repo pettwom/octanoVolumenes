@@ -1,0 +1,447 @@
+﻿@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300);
+@font-face {
+    font-family: 'Battlefield';
+    src: url('Fonts/Battlefield.eot');
+    src: url('Fonts/Battlefield.eot?#iefix') format('embedded-opentype'),
+         url('Fonts/Battlefield.woff2') format('woff2'),
+         url('Fonts/Battlefield.woff') format('woff'),
+         url('Fonts/Battlefield.ttf') format('truetype'),
+         url('Fonts/Battlefield.svg#Battlefield') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body ::-webkit-input-placeholder {
+  /* WebKit browsers */
+  font-family: 'Source Sans Pro', sans-serif;
+  color: white;
+  font-weight: 300;
+}
+body :-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  font-family: 'Source Sans Pro', sans-serif;
+  color: white;
+  opacity: 1;
+  font-weight: 300;
+}
+body ::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  font-family: 'Source Sans Pro', sans-serif;
+  color: white;
+  opacity: 1;
+  font-weight: 300;
+}
+body :-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  font-family: 'Source Sans Pro', sans-serif;
+  color: white;
+  font-weight: 300;
+}
+.wrapper {
+  background: #50a3a2;
+  background: linear-gradient(to bottom right, #1562a5 0%, #2d7e3e 100%);
+  position: relative;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  padding:20px;
+  z-index:0;
+}
+.wraper_footer{
+	position:absolute;
+	bottom:30px;
+	color:#FFFFFF;
+	font-size:10px;
+	font-family:'Century Gothic';
+	text-align:center;
+	width:100%;
+}
+
+.hydro_nombre_sistema{
+	font-family: 'Battlefield';
+	color: #1a9490;
+	font-size:30px;
+}
+
+.hydro_nombre_sistema_sub{
+	font-family: 'Battlefield';
+	color: #1a9490;
+	font-size:15px;
+}
+
+.hydro_div_line_short{
+	line-height:15px;
+}
+
+.wrapper.form-success .container h1 {
+  -webkit-transform: translateY(85px);
+          transform: translateY(85px);
+}
+
+.div_right{
+	float:right;
+	display:inline-block;
+	margin-top:10px;
+}
+.div_left{
+	float:left;
+	display:inline-block;
+}
+
+.div_center{
+	text-align:center;
+}
+
+.containerlg {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 80px 0;
+  text-align: left;
+}
+
+form {
+  padding: 20px 0;
+  position: relative;
+  /*z-index: 2;*/
+}
+
+/*
+.login_input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: 0;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.2);
+  width: 100%;
+  border-radius: 3px;
+  padding: 10px 15px;
+  margin: 0 auto 10px auto;
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+  transition-duration: 0.25s;
+  font-weight: 300;
+}
+.login_input:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.login_input:focus {
+  background-color: white;
+  width: 300px;
+  color: #53e3a6;
+*/
+
+.loginInput{
+	background-color: rgb(255, 255, 255);
+	width:253px;
+	opacity: 0.7;
+	border: solid 5px #ffffff;
+	margin: 15px 5px 15px 5px;
+	line-height: 20px;
+	border-radius: 5px;
+	padding: 5px;
+	font-family:'Century Gothic';
+	font-weight:lighter;
+	color:#069;
+	font-size: 14px;
+}
+
+.icon-style{
+	font-size:18px;
+	color: #FFFFFF;
+	margin-top:25px;
+}
+
+.icon-style2{
+	margin-top:4px;
+}
+
+.icon-style3{
+	font-size:18px;
+	margin-bottom:5px;
+}
+
+.btnLogin{
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: 0;
+  background-color: white;
+  border: 0;
+  margin: 15px 5px 15px 30px;
+  padding: 10px 15px;
+  color: #1a9490;
+  border-radius: 3px;
+  width: 250px;
+  cursor: pointer;
+  font-size: 20px;
+  transition-duration: 0.25s;
+}
+.btnLogin:hover {
+  background-color:#099;
+  color: #f5f7f5;
+}
+
+.bg-bubbles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -3;
+}
+.bg-bubbles li {
+  position: absolute;
+  list-style: none;
+  display: block;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.15);
+  bottom: -560px;
+  -webkit-animation: square 25s infinite;
+  animation: square 25s infinite;
+  transition-timing-function: linear;
+}
+.bg-bubbles li:nth-child(1) {
+  left: 10%;
+}
+.bg-bubbles li:nth-child(2) {
+  left: 20%;
+  width: 80px;
+  height: 80px;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-duration: 17s;
+          animation-duration: 17s;
+}
+.bg-bubbles li:nth-child(3) {
+  left: 25%;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+}
+.bg-bubbles li:nth-child(4) {
+  left: 40%;
+  width: 60px;
+  height: 60px;
+  -webkit-animation-duration: 22s;
+          animation-duration: 22s;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+.bg-bubbles li:nth-child(5) {
+  left: 70%;
+}
+.bg-bubbles li:nth-child(6) {
+  left: 80%;
+  width: 120px;
+  height: 120px;
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.bg-bubbles li:nth-child(7) {
+  left: 32%;
+  width: 160px;
+  height: 160px;
+  -webkit-animation-delay: 7s;
+          animation-delay: 7s;
+}
+.bg-bubbles li:nth-child(8) {
+  left: 55%;
+  width: 20px;
+  height: 20px;
+  -webkit-animation-delay: 15s;
+          animation-delay: 15s;
+  -webkit-animation-duration: 40s;
+          animation-duration: 40s;
+}
+.bg-bubbles li:nth-child(9) {
+  left: 25%;
+  width: 10px;
+  height: 10px;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+  -webkit-animation-duration: 40s;
+          animation-duration: 40s;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+.bg-bubbles li:nth-child(10) {
+  left: 90%;
+  width: 160px;
+  height: 160px;
+  -webkit-animation-delay: 11s;
+          animation-delay: 11s;
+}
+@-webkit-keyframes square {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-700px) rotate(600deg);
+            transform: translateY(-700px) rotate(600deg);
+  }
+}
+@keyframes square {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  100% {
+    -webkit-transform: translateY(-700px) rotate(600deg);
+            transform: translateY(-700px) rotate(600deg);
+  }
+}
+
+.side_buttons{
+  width:100px;
+  height:100px;
+  background-color: #F93;
+  margin: 15px 0px 15px 30px;
+  color: #ffffff;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 13px;
+  transition-duration: 0.25s;
+  text-align:center;
+  display:inline-block;
+  padding:20px 15px 20px 15px;
+}
+.side_buttons:hover {
+  background-color:#099;
+  color: #f5f7f5;
+}
+
+.hydro_class_div_multilinea{
+	display:inline-block;
+}
+
+.side_buttons_extra{
+	background-color:#004DA1;
+}
+
+.row_buttons{
+	text-align:center;
+	margin-top:80px;
+	width:100%;
+	display: inline-block;
+	z-index:2;
+}
+
+.div_nombre_sistema{
+	width:293px;
+	height:147px;
+	background-image:url(../../UI/img/title_frame.png);
+	background-repeat:no-repeat;
+	background-size: contain;
+	display:inline-block;
+	float:left;
+	padding-top:20px;
+	font-family:'Century Gothic';
+	color: #1a9490;
+	text-transform: lowercase;
+	text-align: center;
+}
+
+.img_hydro_logo{
+	height:70px;
+}
+
+.img_anh_logo{
+	height:80px;
+}
+
+.img_nacho_logo{
+	width:30%;
+}
+
+.form_line{
+	display:inline-block;
+	float:left;
+}
+
+@media only screen and (max-width: 1020px) {
+	.img_hydro_logo{
+        height:55px;
+    }
+	.img_anh_logo{
+		height:67px;
+	}
+	.wraper_footer{
+		visibility:hidden;
+	}
+	.row_buttons{
+		margin-top:0px;
+	}
+}
+
+@media only screen and (max-width: 420px) {
+    .img_hydro_logo{
+        height:40px;
+    }
+	.img_anh_logo{
+		height:55px;
+	}
+	.img_nacho_logo{
+		width:25%;
+	}
+	.div_nombre_sistema{
+		width:200px;
+		height:120px;
+		padding-top:10px;
+	}
+	.hydro_nombre_sistema{
+		font-size:20px;
+	}
+	
+	.hydro_nombre_sistema_sub{
+		font-size:10px;
+	}
+	.loginInput{
+		width:200px;
+		padding: 2px;
+	}
+	.div_left{
+		text-align:center;
+	}
+	.form_line{
+		width:100%;
+		float:none;
+		text-align:center;
+	}
+	.btnLogin{
+		margin: 15px 5px 15px 5px;
+		width: 200px;
+		font-size: 20px;
+	}
+	.wraper_footer{
+		visibility:hidden;
+	}
+	.row_buttons{
+		margin-top:0px;
+	}
+	.side_buttons{
+		width:75px;
+		height:75px;;
+		font-size: 9px;
+		padding:15px 15px 20px 15px;
+	}
+}
+
+@media only screen and (max-width: 376px) {
+	.img_hydro_logo{
+        height:35px;
+    }
+	.img_anh_logo{
+		height:40px;
+	}
+	.wraper_footer{
+		visibility:hidden;
+	}
+	.row_buttons{
+		margin-top:0px;
+	}
+}

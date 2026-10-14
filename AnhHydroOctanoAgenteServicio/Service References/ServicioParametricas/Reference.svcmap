@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b4b237f3-504f-40f1-b973-585071b9c22c" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings>
+      <CollectionMapping TypeName="System.Collections.Generic.List`1" Category="List" />
+    </CollectionMappings>
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://vsrvuid004.anh.gob.bo:7443/WSParametricas/ServicioParametricas.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServicioParametricas.wsdl" MetadataType="Wsdl" ID="d1f9a037-9f8b-4a9b-b603-6cbc82004c34" SourceId="1" SourceUrl="https://vsrvuid004.anh.gob.bo:7443/WSParametricas/ServicioParametricas.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="ServicioParametricas.disco" MetadataType="Disco" ID="580b1286-7982-4664-9172-c875cc40fad0" SourceId="1" SourceUrl="https://vsrvuid004.anh.gob.bo:7443/WSParametricas/ServicioParametricas.svc?disco" />
+    <MetadataFile FileName="ServicioParametricas.xsd" MetadataType="Schema" ID="75eb965c-f2a1-4150-a7ac-087cea0c1e5d" SourceId="1" SourceUrl="https://vsrvuid004.anh.gob.bo:7443/WSParametricas/ServicioParametricas.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServicioParametricasEndPoint.wsdl" MetadataType="Wsdl" ID="8151d312-6599-4e65-9838-516509cd27a8" SourceId="1" SourceUrl="https://vsrvuid004.anh.gob.bo:7443/WSParametricas/ServicioParametricas.svc?wsdl" />
+    <MetadataFile FileName="ServicioParametricas1.xsd" MetadataType="Schema" ID="67d96393-269d-41ec-8c50-1ffaff023eab" SourceId="1" SourceUrl="https://vsrvuid004.anh.gob.bo:7443/WSParametricas/ServicioParametricas.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServicioParametricas2.xsd" MetadataType="Schema" ID="f6176154-5d0f-4241-9201-2964e39dc877" SourceId="1" SourceUrl="https://vsrvuid004.anh.gob.bo:7443/WSParametricas/ServicioParametricas.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

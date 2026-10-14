@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="5cae751b-7675-4029-86fb-4d7db936a5d2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.201.0.220:86/ServicioExternoInstitucion.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ServicioExternoInstitucion.xsd" MetadataType="Schema" ID="f38f52c8-5747-4e5f-9433-c7f7ec3a2ae6" SourceId="1" SourceUrl="http://10.201.0.220:86/ServicioExternoInstitucion.svc?xsd=xsd1" />
+    <MetadataFile FileName="ServicioExternoInstitucion1.xsd" MetadataType="Schema" ID="4cf09194-4b5c-4ade-8775-ad283cb55209" SourceId="1" SourceUrl="http://10.201.0.220:86/ServicioExternoInstitucion.svc?xsd=xsd3" />
+    <MetadataFile FileName="ServicioExternoInstitucion2.xsd" MetadataType="Schema" ID="75dc2b6c-024a-4a79-8834-6861fd1480c1" SourceId="1" SourceUrl="http://10.201.0.220:86/ServicioExternoInstitucion.svc?xsd=xsd2" />
+    <MetadataFile FileName="ServicioExternoInstitucion.wsdl" MetadataType="Wsdl" ID="7745a2de-c2ee-4b73-a9c7-fe76136422d9" SourceId="1" SourceUrl="http://10.201.0.220:86/ServicioExternoInstitucion.svc?wsdl" />
+    <MetadataFile FileName="ServicioExternoInstitucion3.xsd" MetadataType="Schema" ID="3e973d46-3a2f-4bf2-90d8-73f55874dcef" SourceId="1" SourceUrl="http://10.201.0.220:86/ServicioExternoInstitucion.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
